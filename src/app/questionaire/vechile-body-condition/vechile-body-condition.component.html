@@ -1,0 +1,533 @@
+<div style="
+    padding: 25px;
+  ">
+  <!-- <form [formGroup]="vehicleConditionFormGroup">
+    <mat-card class="question-card ml-auto mr-auto">
+      <mat-card-content>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+            <label class="content-title required--after" id="example-radio-group-label">Are all of the wheels inflated
+              on your {{
+              selectedMake
+              }} ?
+            </label>
+            &nbsp; &nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex align-items-center justify-content-start">
+            <mat-radio-group color="primary" aria-labelledby="example-radio-group-label" class="example-radio-group"
+              required formControlName="doesAllCarWheelInflated">
+              <mat-radio-button class="example-radio-button" [value]="true">
+                Yes
+              </mat-radio-button>
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="false">
+                No
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="question-card ml-auto mr-auto">
+      <mat-card-content>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+            <label class="content-title required--after" id="example-radio-group-label">Any glass or lights cracked or
+              broken on your {{
+              selectedMake }} ?
+            </label>
+            &nbsp; &nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex align-items-center justify-content-start">
+            <mat-radio-group color="primary" aria-labelledby="example-radio-group-label" class="example-radio-group"
+              required formControlName="doesAllGlassorLightCracked">
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="true">
+                Yes
+              </mat-radio-button>
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="false">
+                No
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="question-card ml-auto mr-auto">
+      <mat-card-content>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+            <label class="content-title required--after" id="example-radio-group-label">Does it have any body damage?
+            </label>
+            &nbsp; &nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex align-items-center justify-content-start">
+            <mat-radio-group color="primary" aria-labelledby="example-radio-group-label" class="example-radio-group"
+              required formControlName="doesBodyDamage">
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="true">
+                Yes
+              </mat-radio-button>
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="false">
+                No
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <ng-container *ngIf="vehicleConditionFormGroup.get('doesBodyDamage')?.value === true">
+      <mat-card class="question-card ml-auto mr-auto">
+        <mat-card-content>
+          <div class="row">
+            <div class="col-6 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center">
+              <label class="content-title required--after" id="example-radio-group-label">Severity of Body Damages?
+              </label>
+              &nbsp; &nbsp;
+            </div>
+          </div>
+          <div class="row">
+            <div class="mt-2 d-flex align-items-center justify-content-start">
+              <div required>
+                <label *ngFor="let option of severityBodyDamageOptions">
+                  <div class="d-flex flex-column justify-conten-center">
+                    <input type="radio" formControlName="doesBodyDamageSeverity" [value]="option.id">
+
+                    <img style="width: 80%;" class="ml-auto mr-auto" [src]="option.img" [alt]="option.value">
+                    <p class="text-center">{{option.value}}</p>
+                  </div>
+
+                </label>
+
+              </div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+
+    <mat-card class="question-card ml-auto mr-auto">
+      <mat-card-content>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+            <label class="content-title required--after" id="example-radio-group-label">Does your {{selectedMake }} has noticeable 
+              dents greater  tennis ball  ?
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex align-items-center justify-content-start">
+            <mat-radio-group color="primary" aria-labelledby="example-radio-group-label"
+              formControlName="NoticeableDingsDentsScratches">
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="true">
+                Yes
+              </mat-radio-button>
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="false">
+                No
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="question-card ml-auto mr-auto">
+      <mat-card-content>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+            <label class="content-title required--after" id="example-radio-group-label">Body panels intact?
+            </label>
+            &nbsp; &nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex align-items-center justify-content-start">
+            <mat-radio-group color="primary" aria-labelledby="example-radio-group-label" class="example-radio-group"
+              required formControlName="doesBodyPanelIntact">
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="true">
+                Yes
+              </mat-radio-button>
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="false">
+                No
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+
+        <br />
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="question-card ml-auto mr-auto">
+      <mat-card-content>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+            <label class="content-title required--after" id="example-radio-group-label">Are the airbags deployed or
+              missing?
+            </label>
+            &nbsp; &nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex align-items-center justify-content-start">
+            <mat-radio-group color="primary" aria-labelledby="example-radio-group-label" class="example-radio-group"
+              required formControlName="doesAirbagsDeployedOrMissing">
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="true">
+                Yes
+              </mat-radio-button>
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="false">
+                No
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+
+        <br />
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="question-card ml-auto mr-auto">
+      <mat-card-content>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+            <label class="content-title required--after" id="example-radio-group-label">
+              Did your {{ selectedMake }} ever suffer flood or fire damage?
+            </label>
+            &nbsp; &nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex align-items-center justify-content-start">
+            <mat-radio-group color="primary" aria-labelledby="example-radio-group-label" class="example-radio-group"
+              required formControlName="DoesCarSufferedFloodorFireDamage">
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="true">
+                Yes
+              </mat-radio-button>
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="false">
+                No
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+
+        <br />
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="question-card ml-auto mr-auto">
+      <mat-card-content>
+        <div class="row">
+          <div class="col-6 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center">
+            <label class="content-title required--after" id="example-radio-group-label">
+              Is the interior of your {{ selectedMake }} intact?
+            </label>
+            &nbsp; &nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 d-flex align-items-center justify-content-start">
+            <mat-radio-group color="primary" aria-labelledby="example-radio-group-label" class="example-radio-group"
+              required formControlName="DoesInteriorIntact">
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="true">
+                Yes
+              </mat-radio-button>
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="false">
+                No
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <br />
+      </mat-card-content>
+    </mat-card>
+  </form> -->
+
+
+
+
+  <img src="assets/img/green-light.png" align="right" alt="green-light" class="margon-top--24">
+  <mat-stepper #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="vehicleConditionFormGroup">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+            <label class="content-title required--after" id="example-radio-group-label">Are all of the wheels inflated
+              on your {{
+              selectedMake
+              }} ?
+            </label>
+            &nbsp; &nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex align-items-center justify-content-start">
+            <mat-radio-group color="primary" aria-labelledby="example-radio-group-label" class="example-radio-group"
+              required formControlName="doesAllCarWheelInflated">
+              <mat-radio-button class="example-radio-button" [value]="true">
+                Yes
+              </mat-radio-button>
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="false">
+                No
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div>
+          <button mat-button matStepperNext class="btn ml-auto btn-next float-right">Next</button>
+        </div>
+      </form>
+    </mat-step>    
+
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="vehicleConditionFormGroup">
+
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+            <label class="content-title required--after" id="example-radio-group-label">Any glass or lights cracked or
+              broken on your {{
+              selectedMake }} ?
+            </label>
+            &nbsp; &nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex align-items-center justify-content-start">
+            <mat-radio-group color="primary" aria-labelledby="example-radio-group-label" class="example-radio-group"
+              required formControlName="doesAllGlassorLightCracked">
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="true">
+                Yes
+              </mat-radio-button>
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="false">
+                No
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext class="btn ml-auto btn-next float-right">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="thirdFormGroup">
+      <form [formGroup]="vehicleConditionFormGroup">
+
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+            <label class="content-title required--after" id="example-radio-group-label">Does it have any body damage?
+            </label>
+            &nbsp; &nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex align-items-center justify-content-start">
+            <mat-radio-group color="primary" aria-labelledby="example-radio-group-label" class="example-radio-group"
+              required formControlName="doesBodyDamage">
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="true">
+                Yes
+              </mat-radio-button>
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="false">
+                No
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext class="btn ml-auto btn-next float-right">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <ng-container *ngIf="vehicleConditionFormGroup.get('doesBodyDamage')?.value === true">
+      <mat-step [stepControl]="fourthFormGroup" label="Fill out your address">
+        <form [formGroup]="vehicleConditionFormGroup">
+          <div class="row">
+            <div class="col-6 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center">
+              <label class="content-title required--after" id="example-radio-group-label">Severity of Body Damages?
+              </label>
+              &nbsp; &nbsp;
+            </div>
+          </div>
+          <div class="row">
+            <div class="mt-2 d-flex align-items-center justify-content-start">
+              <div required>
+                <label *ngFor="let option of severityBodyDamageOptions">
+                  <div class="d-flex flex-column justify-conten-center">
+                    <input type="radio" formControlName="doesBodyDamageSeverity" [value]="option.id">
+
+                    <img style="width: 80%;" class="ml-auto mr-auto" [src]="option.img" [alt]="option.value">
+                    <p class="text-center">{{option.value}}</p>
+                  </div>
+
+                </label>
+
+              </div>
+            </div>
+          </div>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext class="btn ml-auto btn-next float-right">Next</button>
+          </div>
+        </form>
+      </mat-step>
+    </ng-container>
+
+    <mat-step [stepControl]="fifthFormGroup">
+      <form [formGroup]="vehicleConditionFormGroup">
+
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+            <label class="content-title required--after" id="example-radio-group-label">Does your {{selectedMake }} has noticeable 
+              dents greater  tennis ball  ?
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex align-items-center justify-content-start">
+            <mat-radio-group color="primary" aria-labelledby="example-radio-group-label"
+              formControlName="NoticeableDingsDentsScratches">
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="true">
+                Yes
+              </mat-radio-button>
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="false">
+                No
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext class="btn ml-auto btn-next float-right">Next</button>
+        </div>
+      </form>
+    </mat-step>
+  
+    <mat-step [stepControl]="sixthFormGroup">
+      <form [formGroup]="vehicleConditionFormGroup">
+
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+            <label class="content-title required--after" id="example-radio-group-label">Body panels intact?
+            </label>
+            &nbsp; &nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex align-items-center justify-content-start">
+            <mat-radio-group color="primary" aria-labelledby="example-radio-group-label" class="example-radio-group"
+              required formControlName="doesBodyPanelIntact">
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="true">
+                Yes
+              </mat-radio-button>
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="false">
+                No
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext class="btn ml-auto btn-next float-right">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="seventhFormGroup">
+      <form [formGroup]="vehicleConditionFormGroup">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+            <label class="content-title required--after" id="example-radio-group-label">Are the airbags deployed or
+              missing?
+            </label>
+            &nbsp; &nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex align-items-center justify-content-start">
+            <mat-radio-group color="primary" aria-labelledby="example-radio-group-label" class="example-radio-group"
+              required formControlName="doesAirbagsDeployedOrMissing">
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="true">
+                Yes
+              </mat-radio-button>
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="false">
+                No
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext class="btn ml-auto btn-next float-right">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="eighthFormGroup">
+      <form [formGroup]="vehicleConditionFormGroup">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+            <label class="content-title required--after" id="example-radio-group-label">
+              Did your {{ selectedMake }} ever suffer flood or fire damage?
+            </label>
+            &nbsp; &nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex align-items-center justify-content-start">
+            <mat-radio-group color="primary" aria-labelledby="example-radio-group-label" class="example-radio-group"
+              required formControlName="DoesCarSufferedFloodorFireDamage">
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="true">
+                Yes
+              </mat-radio-button>
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="false">
+                No
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext class="btn ml-auto btn-next float-right">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="ninethFormGroup">
+      <form [formGroup]="vehicleConditionFormGroup">
+        <div class="row">
+          <div class="col-6 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center">
+            <label class="content-title required--after" id="example-radio-group-label">
+              Is the interior of your {{ selectedMake }} intact?
+            </label>
+            &nbsp; &nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 d-flex align-items-center justify-content-start">
+            <mat-radio-group color="primary" aria-labelledby="example-radio-group-label" class="example-radio-group"
+              required formControlName="DoesInteriorIntact">
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="true">
+                Yes
+              </mat-radio-button>
+              <mat-radio-button class="example-radio-button" name="Question.name" [value]="false">
+                No
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+            <!-- <button mat-button matStepperNext>Next</button> -->
+        </div>
+      </form>
+    </mat-step>
+  </mat-stepper>
+
+</div>

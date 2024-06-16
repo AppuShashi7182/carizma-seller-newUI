@@ -1,0 +1,75 @@
+/* –––––––––––––––––––––––––––––––––––––––––––––––––– */
+*/ :root {
+  --white: white;
+  --gray: #999;
+  --lightgray: whitesmoke;
+  --darkgreen: #2a9d8f;
+  --popular: #ffdd40;
+  --starter: #f73859;
+  --essential: #00aeef;
+  --professional: #ff7f45;
+}
+.container11 {
+  max-width: 100px;
+  text-align: center;
+  padding: 0 3px;
+  margin: 0 auto;
+}
+/* SWITCH STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.switch-wrapper {
+  position: relative;
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid lightgrey;
+  border-radius: 30px;
+  background: white;
+}
+
+.switch-wrapper [type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.switch-wrapper [type="radio"]:checked#yes ~ label[for="yes"],
+.switch-wrapper [type="radio"]:checked#no ~ label[for="no"] {
+  color: white;
+}
+
+.switch-wrapper [type="radio"]:checked#yes ~ label[for="yes"]:hover,
+.switch-wrapper [type="radio"]:checked#no ~ label[for="no"]:hover {
+  background: transparent;
+}
+
+.switch-wrapper [type="radio"]:checked#yes + label[for="no"] ~ .highlighter {
+  transform: none;
+}
+
+.switch-wrapper [type="radio"]:checked#no + label[for="yes"] ~ .highlighter {
+  transform: translateX(100%);
+}
+
+.switch-wrapper label {
+  font-size: 16px;
+  z-index: 1;
+  min-width: 60px;
+  line-height: 32px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: color 0.25s ease-in-out;
+}
+
+.switch-wrapper label:hover {
+  background: whitesmoke;
+}
+
+.switch-wrapper .highlighter {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  border-radius: 30px;
+  background: #2a9d8f;
+  transition: transform 0.25s ease-in-out;
+}

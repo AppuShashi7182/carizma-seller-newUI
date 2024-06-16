@@ -1,0 +1,349 @@
+.home{
+    padding: 0;
+    margin-top: 5rem;
+}
+.sellContainer{
+    background-color: #F6F7F9;
+    padding: 0 4rem;
+}
+.sellCarText{
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+}
+.sellCarTextColored{
+   color: #67A6F8;
+}
+.link{
+    color: blue;
+    cursor: pointer;
+}
+.background{
+    width: 35rem;
+    height: auto;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    border-radius: 20px;
+    margin-top: 0px;
+}
+.onlineQuote{
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    font-family: 'Open Sans', sans-serif;
+}
+.howItWorksText{
+    font-size: 1.5rem;
+    color: #7D7D7D;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.takeItAllTextHeader{
+    font-size: 1.1rem;
+    color: #C5D1D1;
+}
+.takeItAllText{
+    color: white;
+    font-size: 1.6rem;
+}
+.how-it-works-header{
+    font-size: 3rem;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+}
+.how-it-works-text{
+    font-family: 'Open Sans', sans-serif;
+}
+.popularCarstxt{
+    font-size: 1.5rem;
+    font-weight: bolder; 
+    color: #7D7D7D;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.dots{
+    width: auto;
+    height: 10px;
+}
+.dots2{
+    width: auto;
+    width: 25px;
+}
+.how-it-works{
+    background-color: #FEFFFE;
+    padding-top: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder; 
+    /* margin-top: 4rem; */
+}
+.hoverLink{
+    cursor: pointer;
+
+}
+.hoverLink:hover {
+    text-decoration: underline;
+  }
+  .arrowicon:hover{
+    transform: translateX(5px);
+}
+.step1ColoredText{
+    color: #EA2B2B;
+}
+.step2ColoredText{
+    color: #FEE200;
+}
+.step3ColoredText{
+    color: #1D9F32;
+}
+.services{
+    width: 96%;
+    height: 96%;
+}
+.presence{
+    width: 96%;
+    height: 96%;
+    border: 3px solid black;
+    transition: background-color 0.8s ease;
+    background-color: #B2D2FB;
+    padding: 22px 45px;
+    cursor:default;
+}
+.presence:hover{
+    background-color: black;
+    color: white;
+}
+.presenceTxt{
+    font-size: 2.2vw;
+    text-align: center;
+    font-weight: 500;
+}
+.mapBackground{
+    position: absolute;
+    right: 0;
+    margin-top: -15%;
+    width: 20rem;
+}
+.servicesBlock1{
+    /* background-color: #014379; */
+}
+.servicesFlag{
+    position: absolute;
+    width: 37%;
+    height: auto;
+    z-index: 2;
+    margin-left: -2%;
+    margin-top: -7%;
+}
+.servicesBackground{
+    background-color: #EA2B2B;
+    margin: 8px;
+}
+.carContainer{
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+.servicesCar{
+    width: 100%;
+}
+.carHeader{
+    color: white;
+    position: relative;
+    z-index: 3;
+    margin-top: 85%;
+    padding-left: 30px;
+}
+.drivingDream{
+    position: absolute;
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+    height: 96%;
+}
+.drivingDreamHeader{
+    font-size: 3vw;
+    color: white;
+    position: relative;
+    z-index: 3;
+    padding-left: 30px;
+}
+.carText{
+    color: white;
+    font-size: 1.2vw;
+    margin-top: 20px;
+    position: relative;
+    z-index: 3;
+    padding: 0 30px;
+}
+
+.nation-wide-service {
+    background-color: #B2D2FB;
+}
+
+.faq {
+    background-color: black;
+}
+.faq-content{
+    color: white !important;;
+    font-family: 'Open Sans', sans-serif;
+}
+.faq-item{
+    border-radius: 5px;
+    padding: 32px;
+    color: white !important;
+    background-color: #5d5d5d;
+    font-family: 'Open Sans', sans-serif;
+}
+.num{
+    color: white !important;
+    font-family: 'Open Sans', sans-serif;
+}
+.clients{
+    margin-top: 5rem;
+}
+.testimonials{
+    margin-top: 16%;
+    padding: 4rem;
+}
+.nationWideContainer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.nationWideBackground{
+    width: 98%;
+    height: 99%;
+    padding-left: 10px;
+    position: absolute;
+}
+.take-it-all{
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: black;
+}
+.takeAllCarsImg{
+    height: 100%;
+    width: 100%;
+}
+.textContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.backgroundCar{
+    position: absolute;
+    width: 12%;
+}
+.slide-container {
+    overflow: hidden;
+}
+.testimonailBackgroundImg{
+    width: 42%;
+
+}
+.testimonailBackground{
+    width: 96%;
+    height: 50%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    border-radius: 20px;
+    margin-top: 0px;
+    justify-content: flex-end;
+}
+.testimonialTestHeader{
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+.quoteImg{
+    position: absolute;
+    left: 20%;
+    margin-top: -20%;
+}
+.testimonialContainer{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+.testimonial-item{
+    width: 40%;
+    background: white;
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: -13px -2px 20px -5px #dadada;
+    font-family: 'Open Sans', sans-serif;
+}
+.testimonialHeader{
+    font-size: 3rem;
+    margin-left: 50%;
+    justify-content: flex-end;
+    display: flex;
+    margin-top: -10%;
+    position: absolute;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+}
+.authorDesignation{
+    font-family: 'Open Sans', sans-serif;
+}
+.authorName{
+    font-family: 'Open Sans', sans-serif;
+}
+.know-more{
+    justify-content: center;
+    margin-bottom: 4rem;
+    cursor: pointer;
+}
+.text-format-open-sans{
+    font-family: 'Open Sans', sans-serif;
+}
+.text-format-montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+@media (max-width: 1999px) {
+    .how-it-works-light {
+        text-align: -webkit-center !important;
+    }
+}
+@media (max-width: 768px) {
+    .background {
+      max-width: 75% !important;
+    }
+    .how-it-works-light{
+        justify-content: center;
+        display: flex;
+    }
+    .testimonial-item{
+        width: 100%;
+    }
+    .testimonialHeader{
+        margin-top: -28%;
+        font-size: 30px;
+    }
+    .clients{
+        margin-top: 15rem;
+    }
+    .sellContainer{
+        padding: 0;
+    }
+    .testimonials{
+        margin-top: 20%;
+        padding: 1rem;
+    }
+    .testimonialHeader{
+       margin-left: 0;
+       padding-top: 30px;
+    }
+    .servicesFlag{
+        margin-top: -4%;
+    }
+    .take-it-all{
+        width: 90%;
+        margin: 20px;
+    }
+  }

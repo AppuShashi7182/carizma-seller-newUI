@@ -1,0 +1,132 @@
+.container-fluid{
+    background: white;
+    padding: 0 50px;
+    overflow-y: hidden;
+}
+.aboutUsHeader{
+    font-size: 4rem;
+    font-weight: 500;
+    padding: 0 5rem;
+    margin-top: 2.5rem;
+}
+.groupImg{
+    width: 50%;
+    border-radius: 10px;
+}
+.card1{
+    background: #F4F4F4;
+    border-radius: 5px;
+    padding: 2rem;
+    margin-top: -3%;
+    margin-left: 2%;
+    margin-bottom: 2rem;
+}
+.card2{
+    background: #F4F4F4;
+    border-radius: 5px;
+    padding: 2rem;
+    margin-top: -3%;
+    margin-left: 15%;
+    margin-bottom: 2rem;
+}
+.dots{
+    width: auto;
+    height: 20px;
+}
+.cardHeader{
+    font-size: 1.8rem;
+    color: #7D7D7D;
+    margin-bottom: 1rem;
+}
+.cardText{
+    font-size: 1rem;
+}
+.apartTextDiv{
+    text-align: center;
+}
+.apartText{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.featureImg{
+    height: 5rem;
+    z-index: 5;
+    position: relative;
+}
+.featureCardHeader{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.red{
+    display: flex;
+    height: 2rem;
+    width: 2.5rem;
+    background: red;
+    position: absolute;
+    left: 45px;
+    top: 30px;
+}
+.yellow{
+    display: flex;
+    height: 2rem;
+    width: 2.5rem;
+    background: #FFD800;
+    position: absolute;
+    left: 45px;
+    top: 30px;
+}
+.green{
+    display: flex;
+    height: 2rem;
+    width: 2.5rem;
+    background:#06FF00;
+    position: absolute;
+    left: 45px;
+    top: 30px;
+}
+.visionFooter{
+    background-color: #212121;
+    height: auto;
+    padding: 5rem 0;
+    overflow: hidden;
+}
+.visionImg{
+    width: 40%;
+    border-radius: 5px;
+}
+.visionHeader{
+    font-size: 3.5rem;
+    color: white;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+    padding: 10px;
+}
+.visionText{
+    font-size: 1.2rem;
+    color: white;
+    padding: 10px;
+}
+.joinFamilyHeader{
+    color: white;
+    font-size: 4rem;
+    font-weight: 500;
+    text-align: center;
+}
+.joinFamilyText{
+    color: white;
+    text-align: center;
+}
+.getPriceBtn{
+    background-color: #67A6F8;
+    font-size: 15px;
+    padding: 0.5rem 5rem;
+    border-radius: 10px;
+}
+
+
+  @media (max-width: 752px) {
+    .card {
+        margin-left: 25px !important;
+     }
+  }
+

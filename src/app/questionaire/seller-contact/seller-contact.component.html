@@ -1,0 +1,84 @@
+<div class="sellerWrapper">
+  <form [formGroup]="contactFormGroup">
+    <mat-card class="question-card ml-auto mr-auto">
+      <mat-card-content>
+        <div fxLayout="column" class="seller-contact">
+          <!-- <h2>Where should we send your Instant Cash Offer?</h2> -->
+          <span class="breadcrumb" style="text-decoration: none !important">Where should we send your Instant Cash
+            Offer?</span>
+          <div class="form-group mt-2 formElements">
+            <mat-label>Full Name</mat-label>
+            <input matNativeControl
+              [ngClass]="{'input-form-success': contactFormGroup.get('fullName')?.valid, 'form-control':true,'input-form-error': contactFormGroup.get('fullName')?.invalid && contactFormGroup.get('fullName')?.touched}"
+              matInput name="fullName" type="text" formControlName="fullName" />
+            <mat-error class="d-flex"
+              *ngIf="contactFormGroup.get('fullName')?.invalid && contactFormGroup.get('fullName')?.touched">Please
+              provide
+              Full Name.</mat-error>
+          </div>
+
+          <div class="form-group mt-2 formElements ">
+            <mat-label>Email</mat-label>
+            <input matNativeControl
+              [ngClass]="{'input-form-success': contactFormGroup.get('email')?.valid, 'form-control':true,'input-form-error': contactFormGroup.get('email')?.invalid && contactFormGroup.get('email')?.touched}"
+              name="email" matInput type="email" formControlName="email" />
+            <mat-error class="d-flex"
+              *ngIf="contactFormGroup.get('email')?.invalid && contactFormGroup.get('email')?.touched">
+              <span *ngIf="contactFormGroup.get('email')?.hasError('required')">
+                Email is required.
+              </span>
+              <span *ngIf="contactFormGroup.get('email')?.hasError('email')">
+                Please provide valid email.
+              </span>
+            </mat-error>
+          </div>
+
+          <div class="form-group mt-2 formElements">
+            <mat-label>Phone Number</mat-label>
+            <input matNativeControl
+              [ngClass]="{'input-form-success': contactFormGroup.get('mobile')?.valid, 'form-control':true,'input-form-error': contactFormGroup.get('mobile')?.invalid && contactFormGroup.get('mobile')?.touched}"
+              matInput name="mobile" type="tel" formControlName="mobile" />
+            <mat-error class="d-flex"
+              *ngIf="contactFormGroup.get('mobile')?.invalid && contactFormGroup.get('mobile')?.touched">
+              <span *ngIf="contactFormGroup.get('mobile')?.hasError('required')">
+                Phone Number is required.
+              </span>
+              <span *ngIf="contactFormGroup.get('mobile')?.hasError('pattern')">
+                Please provide valid phone number.
+              </span>
+            </mat-error>
+          </div>
+
+
+          <!-- <mat-form-field appearance="outline">
+          <mat-label>Zip Code</mat-label>
+          <input
+            matNativeControl
+            matInput
+            type="number"
+            [(ngModel)]="selectedContact.zipCode"
+          />
+        </mat-form-field> -->
+
+          <div class="mt-2 verify">
+            <!-- First Row -->
+            <div class="row">
+              <div class="col-sm-12 checkbox d-flex">
+                <div class="form-check w-100 ">
+                  <input class="form-check-input custom-checkbox-style col-form-label-lg" type="checkbox"
+                    formControlName="checkbox" id="defaultCheck1" />
+                  <label class="form-check-label" for="defaultCheck1">
+                    I verify that the above listed phone number is mine and I
+                    consent to receive automated and pre-recorded/artificial
+                    calls, including text messages, relating to my vehicle and my
+                    relationship with Carizma.
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</div>

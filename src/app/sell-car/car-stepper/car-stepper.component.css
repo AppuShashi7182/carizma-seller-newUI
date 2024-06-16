@@ -1,0 +1,138 @@
+.car-header {
+  padding-left: 95px;
+  margin-top: 110px;
+  font-size: 1rem;
+  /* margin: 25px 0 0 95px; */
+  align-items: center;
+  font-weight: 500 !important;
+  /* background-color: #f4f4f4; */
+  background-repeat: repeat-x;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.car-stepper-content {
+  background: white;
+  margin: 25px 100px 10rem 95px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 9px;
+  min-width: 400px;
+  max-height: 120rem;
+  height: auto;
+  border-radius: 16px;
+}
+
+.btn-width {
+  width: 69px;
+  font-weight: bolder;
+}
+
+.btn-back {
+  font: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  line-height: inherit;
+  overflow: visible;
+  background-color: #fff;
+  border-left: 2px solid #0a3453;
+  border-top: 2px solid #0a3453;
+  border-bottom: 2px solid #0a3453;
+  border-right: 2px solid #0a3453;
+  height: 50px;
+  width: 140px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 30px;
+  color: #767676;
+  font-family: Arial, Helvetica, sans-serif;
+  border-color: #757575 !important;
+  cursor: pointer;
+}
+
+.btn-next {
+  font: inherit;
+  box-sizing: border-box;
+  line-height: inherit;
+  overflow: visible;
+  background-color: #fff;
+  border-left: 2px solid #0a3453;
+  border-top: 2px solid #0a3453;
+  border-bottom: 2px solid #0a3453;
+  border-right: 2px solid #0a3453;
+  height: 50px;
+  width: 140px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 30px;
+  color: #767676;
+  background: linear-gradient(to right, #acb6e5, #86fde8);
+  font-family: Arial, Helvetica, sans-serif;
+  border-color: #757575 !important;
+  cursor: pointer;
+}
+
+.btn-next:hover {
+  box-shadow: 2px 5px 4px #767676;
+}
+
+.btn-back:hover {
+  box-shadow: 2px 5px 4px #767676;
+}
+
+.mat-horizontal-stepper-header {
+  pointer-events: none !important;
+}
+
+mat-horizontal-stepper {
+  padding-top: 16px;
+}
+
+
+.mat-mdc-progress-bar{
+  height: 2rem !important;
+  /* position: absolute; */
+  /* bottom: -4rem; */
+}
+.mdc-linear-progress__primary-bar {
+  transform: scaleX(0.4);
+  color: #575756;
+  background: #575756;
+  height: 1rem !important;
+}
+
+.mdc-linear-progress__buffer{
+  height: 1rem !important;
+  background: #9D9D9C !important;
+
+}
+
+.mdc-linear-progress__bar mdc-linear-progress__primary-bar{
+  height: 4rem !important;
+  background: aquamarine !important;
+
+}
+.dollarImage{
+  width: 8rem;
+  height: 8rem;
+  margin-left: 92%;
+}
+.miniCarImage{
+  width: 6rem;
+  height: 4rem;
+}
+.mat-mdc-radio-button {
+  border:0 !important;
+  background-color: white !important;
+}
+.mat-mdc-radio-checked{
+  background-color: #cee6f3  !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .car-stepper-content {
+    margin: 5px 10px 0 15px
+  }
+  .car-header{
+    padding-left:0
+  }
+}

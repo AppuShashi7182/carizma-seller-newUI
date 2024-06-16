@@ -1,0 +1,91 @@
+/* .example-radio-group {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+  align-items: flex-start;
+  line-height: 25px;
+  font-size: 30px;
+  font-weight: 600;
+} */
+.example-radio-group-column {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+  line-height: 25px;
+  font-size: 30px;
+  font-weight: 600;
+}
+/* .question-label {
+  font-size: 40px;
+  font-weight: 600;
+} */
+
+.question-value {
+  font-size: 15px;
+  align-items: start;
+}
+/* .example-radio-button {
+  margin: 5px;
+} */
+.example-h2 {
+  margin: 10px;
+}
+
+.car-selection-space {
+  left: 5vw;
+  top: 15vh;
+  bottom: 25vh;
+}
+.car-Declaration {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+}
+/* .example-radio-group {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 0;
+  align-items: flex-start;
+  line-height: 20px;
+  font-size: 25px;
+  font-weight: 600;
+} */
+
+.question-label {
+  font-size: 18px;
+  font-weight: 500;
+}
+.example-radio-button {
+  margin: 3px;
+}
+
+.question-slider {
+  align-items: center;
+  float: right;
+  color: white;
+}
+.question-float-right {
+  flex-flow: end;
+}
+
+.question-card {
+  max-width: 100%;
+  min-width: 300px;
+  margin-bottom: 25px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 6px;
+}
+
+.question-from-control {
+  display: block;
+  width: 60%;
+  margin: 3px;
+}
+
+.breadcrumb {
+  color: #0a3453;
+  text-decoration: none;
+}

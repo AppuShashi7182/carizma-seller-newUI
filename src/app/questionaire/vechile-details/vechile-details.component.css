@@ -1,0 +1,234 @@
+/* .example-radio-group {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+  align-items: flex-start;
+  line-height: 25px;
+  font-size: 30px;
+  font-weight: 600;
+} */
+
+
+.question-label {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.question-slider {
+  align-items: center;
+  float: right;
+  color: white;
+}
+
+.buttonContainer{
+  margin-top: 7%;
+}
+.nextBtn{
+  padding: 5px 4rem !important;
+  border-radius: 10px !important;
+  margin: 10px 5px;
+  background-color: #67A6F8 !important;
+  color:white !important;
+  font-family: 'Open Sans', sans-serif;
+}
+.previousBtn{
+    padding: 10px 4rem !important;
+    border-radius: 10px !important;
+    background-color: #1b1b1b !important;
+    color: white !important;
+    font-family: 'Open Sans', sans-serif;
+    margin: 10px 5px;
+}
+
+
+.question-value {
+  font-size: 15px;
+  align-items: start;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.example-h2 {
+  margin: 10px;
+}
+
+.car-selection-space {
+  left: 5vw;
+  top: 15vh;
+  bottom: 25vh;
+}
+
+.car-Declaration {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+}
+
+/* .example-radio-group {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 0;
+  align-items: flex-start;
+  line-height: 20px;
+  font-size: 25px;
+  font-weight: 600;
+} */
+mat-form-field {
+  padding: 3px 1px;
+}
+
+mat-form-field {
+  width: 80%;
+  height: 80%;
+}
+
+mat-radio-button {
+  background-color: #cee6f3;
+  border: 2px solid black;
+  padding-top: 12px;
+  padding-left: 12px;
+  padding-bottom: 16px;
+  padding-right: 22px;
+  border-radius: 10px;
+}
+
+.question-label {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.example-radio-button {
+  margin: 3px;
+}
+
+.question-slider {
+  align-items: center;
+  float: right;
+}
+
+.question-float-right {
+  flex-flow: end;
+}
+
+.question-card {
+  max-width: 80%;
+  min-width: 300px;
+  margin-bottom: 25px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 6px !important;
+}
+
+.question-from-control {
+  display: block;
+  width: 60%;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+.invalid {
+  color: red !important;
+}
+
+.custom-form-field {
+  /* Set the desired shadow properties */
+  box-shadow: 0 2px 4px rgba(73, 146, 230, 0.1);
+  /* You can adjust the values for x, y, blur, and color as needed */
+  transition: box-shadow 0.3s ease;
+  /* Add a smooth transition on hover (optional) */
+}
+
+/* Add styles for the mat-form-field input when focused */
+.custom-form-field.mat-focused {
+  /* Set a different shadow style when the input is focused (optional) */
+  box-shadow: 0 4px 8px rgba(73, 146, 230, 0.1);
+}
+
+.custom-select {
+  background-color: white;
+  border: 1px solid lightblue;
+  color: black;
+  /* Set the text color of the options */
+}
+
+.mat-selected {
+  color: white !important;
+}
+
+.mat-mdc-option.mdc-list-item--hover {
+  background: red !important;
+}
+
+.mat-mdc-option.mdc-list-item:hover {
+  background: #1e6c92 !important;
+  color: white !important
+}
+
+.mat-mdc-option.mat-mdc-option-active {
+  background: #1e6c92 !important;
+  color: white !important
+}
+
+.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text {
+  color: white !important;
+}
+
+::ng-deep .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+  background-color: rgb(0, 0, 0) !important;
+}
+
+::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: rgb(0, 0, 0)!important;   /*inner circle color change*/
+}
+
+::ng-deep.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+ border-color:rgb(0, 0, 0)!important; /*outer ring color change*/
+}
+
+.content-title {
+  font-size: 1.8rem;
+  font-weight: 480;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.mdc-form-field>label {
+  margin-left: 0;
+  margin-right: auto;
+  padding-left: 4px;
+  padding-right: 0;
+  order: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+}
+
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-mdc-form-field {
+  margin-top: 16px;
+}
+.damgeImages{
+  border: 1px solid #D8D8D8;
+  padding: 20px 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+.damageRadio{
+  width: 30px;
+  height: 30px;
+}
+.damageValueText{
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.damagedImage{
+  padding: 0;
+  width: 100%;
+  height: 10rem;
+  margin: 0 10px;
+}

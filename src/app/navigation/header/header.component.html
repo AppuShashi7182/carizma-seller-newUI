@@ -1,0 +1,95 @@
+
+<header id="header" class="header fixed-top d-flex align-items-center">
+  <div class="btn-group" > 
+    <!-- <ng-container *ngIf="!showMenu">
+      <div (click)="handleShowMenu()"><mat-icon >dehaze</mat-icon></div>
+    </ng-container>
+    <ng-container  *ngIf="showMenu">
+      <div (click)="handleShowMenu()"><mat-icon>close</mat-icon></div>
+      
+    </ng-container>
+    <ng-container  *ngIf="showMenu" >
+      <div style="display:block;margin-top: 30px;">
+    <ul class="dropdown-menu" style="display:block;border-radius: 10px;">
+      <li class="menu-item"><a class="dropdown-item text-format-open-sans" (click)="navigate('home')"style="align-items: center;display: flex;"><span>Home</span></a></li>
+      <mat-divider style="border: 1px solid #e9e9e9;"></mat-divider> 
+      <li class="menu-item"><a class="dropdown-item text-format-open-sans" (click)="navigate('about')" style="align-items: center;display: flex"><span>About</span></a></li>
+      <mat-divider  style="border: 1px solid #e9e9e9;"></mat-divider> 
+      <li class="menu-item"><a class="dropdown-item text-format-open-sans" (click)="navigate('how-we-work')" style="align-items: center;display: flex"> 	<span>How we work</span></a></li>
+      <mat-divider  style="border: 1px solid #e9e9e9;"></mat-divider> 
+      <li class="menu-item"><a class="dropdown-item text-format-open-sans" href="index.html#contact" style="align-items: center;display: flex"><span>Contact</span></a></li>
+    </ul>
+  </div>
+    </ng-container> -->
+  </div>
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+   
+
+    <!-- Nav Menu -->
+    <!-- <nav id="navmenu" class="navmenu"> -->
+      <!-- <ul> -->
+        <!-- <li class="headerLink" ><a (click)="navigate('home')" class="link text-format-open-sans"   [ngClass]="{ 'active': key === 'home'}">Home</a><span class="col-md-8"  [ngClass]="{ 'activeLink': key === 'home'}"></span></li>
+        <li  class="headerLink"><a (click)="navigate('about')" class="link text-format-open-sans" [ngClass]="{'active': key === 'about'}">About</a><span class="col-md-8"  [ngClass]="{ 'activeLink': key === 'about'}"></span></li>
+        <li  class="headerLink"><a (click)="navigate('how-we-work')" class="link text-format-open-sans" [ngClass]="{ 'active': key === 'how-we-work'}">How we work</a><span class="col-md-8"  [ngClass]="{ 'activeLink': key === 'how-we-work'}"></span></li> -->
+        <!-- <li  class="headerLink"><a href="index.html#services" class="link" [ngClass]="{ 'active': key === 'services'}">Services</a><span class="col-md-8"  [ngClass]="{ 'activeLink': key === 'services'}"></span></li> -->
+        <!-- <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="dropdown has-dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down"></i></a>
+          <ul class="dd-box-shadow">
+            <li><a href="#">Dropdown 1</a></li>
+            <li class="dropdown has-dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down"></i></a>
+              <ul class="dd-box-shadow">
+                <li><a href="#">Deep Dropdown 1</a></li>
+                <li><a href="#">Deep Dropdown 2</a></li>
+                <li><a href="#">Deep Dropdown 3</a></li>
+                <li><a href="#">Deep Dropdown 4</a></li>
+                <li><a href="#">Deep Dropdown 5</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Dropdown 2</a></li>
+            <li><a href="#">Dropdown 3</a></li>
+            <li><a href="#">Dropdown 4</a></li>
+          </ul>
+        </li> -->
+        <!-- <li class="headerLink"><a href="index.html#contact"  class="link text-format-open-sans" [ngClass]="{ 'active': key === 'services'}">Contact</a><span class="col-md-8"  [ngClass]="{ 'activeLink': key === 'contact'}"></span></li> -->
+      <!-- </ul> -->
+
+      <!-- <i class="mobile-nav-toggle d-xl-none bi bi-list"></i> -->
+    <!-- </nav> -->
+    <!-- End Nav Menu -->
+    <!-- <a class="btn-getstarted" href="index.html#about">Login / Sign Up</a> -->
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <img src="assets/img/logo01.png" alt="carizma logo" style="max-height: 2.5rem;">
+      <!-- <h1>Append</h1>
+      <span>.</span> -->
+      </a>
+    <button type="button" (click)="navigate('login')" class="loginBtn btn btn-outline-primary text-format-open-sans">Login / Sign Up</button> 
+  </div>
+</header><!-- End Header -->
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="../../../assets/images/logo 01.png"
+    routerLink="/sell-car"  class="d-inline-block align-top log1" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav> -->

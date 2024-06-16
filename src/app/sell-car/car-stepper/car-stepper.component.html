@@ -1,0 +1,181 @@
+<app-car-loader *ngIf="isLoading"></app-car-loader>
+
+<!-- <div class="car-header class.mat-elevation-z8">
+  Instant Cash Offer :
+  {{
+  " " +
+  selectVechileDetails?.year +
+  " " +
+  selectVechileDetails?.make +
+  " " +
+  selectVechileDetails?.model
+  }}
+</div> -->
+<div class="row m-0">
+  <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
+    <div class="car-header class.mat-elevation-z8 ">
+      Instant Cash Offer for your
+      {{
+      " " +
+      selectVechileDetails?.year +
+      " " +
+      selectVechileDetails?.make +
+      " " +
+      selectVechileDetails?.model
+      }}
+    </div>
+  </div>
+</div>
+<div class="car-stepper-content">
+  <mat-horizontal-stepper #stepper (selectionChange)="onStepChange($event)" linear>
+    <mat-step label="Vehicle  Details">
+      <app-vechile-details  (getPageNumber)="getPageNumber($event)" (stepOneValidated)="validateStepperOne($event)"></app-vechile-details>
+      <!-- <div>
+        <img src="assets/images/dollar.png" class="dollarImage" alt="">
+      </div> -->
+      <div #animatedElement>
+        <img src="assets/images/miniCar.png" class="miniCarImage" alt="" [style.margin-left]="carPosition+'%'">
+      </div>
+      <mat-progress-bar  mode="determinate" value={{this.stepperNumber}}></mat-progress-bar>
+      <!-- <mat-divider></mat-divider> -->
+      <!-- <div *ngIf="reviewService.activateContactPage" class="w-100">
+        <div class="row m-0">
+          <div class="col-12 d-flex m-0 mt-3 p-0">
+            <button (click)="setNoTittleDefaultValue()" class="btn ml-auto btn-next">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="reviewService.vehicleDetailsPageStepper" class="w-100">
+        <div class="row m-0">
+          <div class="col-12 d-flex m-0 mt-3 p-0">
+            <button (click)="nextStep(0)" class="btn ml-auto btn-next">
+              Next
+            </button>
+          </div>
+        </div>
+      </div> -->
+    </mat-step>
+    <!-- <mat-step label="Vehicle Condition">
+      <app-vechile-condition (stepTwoValidated)="validateStepperOne($event)"></app-vechile-condition>
+
+      <mat-divider></mat-divider>
+      <div class="w-100" *ngIf="reviewService.vehicleConditionPageStepper">
+        <div class="row m-0">
+          <div class="col-md-6 offset-1 d-flex m-0 mt-3 p-0">
+            <button class="btn btn-back" (click)="prevStep(0)">Back</button>
+          </div>
+          <div class="col-6 d-flex m-0 mt-3 p-0">
+            <button class="btn ml-auto btn-next" (click)="nextStep(1)">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </mat-step> -->
+    <!-- <mat-step label="Vehicle Body Condition">
+      <app-vechile-body-condition (stepThreeValidated)="validateStepperOne($event)"></app-vechile-body-condition>
+
+      <mat-divider></mat-divider>
+      <div class="w-100">
+        <div class="row m-0">
+          <div class="col-6 d-flex m-0 mt-3 p-0">
+            <button class="btn btn-back" (click)="prevStep(1)">Back</button>
+          </div>
+          <div class="col-6 d-flex m-0 mt-3 p-0">
+            <button class="btn ml-auto btn-next" (click)="nextStep(2)">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </mat-step> -->
+
+    <mat-step label="Contact Information">
+      <app-seller-contact (contactStepValidation)="validateStepperOne($event)"></app-seller-contact>
+      <!-- <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button >Next</button>
+      </div> -->
+      <!-- <mat-divider></mat-divider>
+      <div
+        _ngcontent-my-app-c41=""
+        class="row m-0 smc-controlled-width w-100 btn-back"
+      >
+        <div _ngcontent-my-app-c41="" class="col-6 d-flex m-0 p-0">
+          <button
+            _ngcontent-my-app-c41=""
+            class="secondary-cta mr-auto"
+            fdprocessedid="lef4y2"
+          >
+            Back
+          </button>
+        </div>
+        <div _ngcontent-my-app-c41="" class="col-6 d-flex m-0 p-0">
+          <button
+            _ngcontent-my-app-c41=""
+            class="primary-cta ml-auto"
+            disabled=""
+          >
+            Next
+          </button>
+        </div>
+      </div> -->
+
+      <mat-divider></mat-divider>
+      <div class="w-100">
+        <div class="row m-0">
+          <div class="col-6 d-flex m-0 mt-3 p-0">
+            <button mat-raised-button matStepperPrevious  class="previousBtn" (click)="prevStep(2)">Back</button>
+          </div>
+          <div class="col-6 d-flex m-0 mt-3 p-0 d-flex justify-content-end">
+            <!-- <button class="btn ml-auto btn-next" (click)="nextStep(3)">
+              Next
+            </button> -->
+            <button (click)="nextStep(3)" class="nextBtn border" >Next</button>
+          </div>
+        </div>
+      </div>
+    </mat-step>
+    <mat-step label="Review">
+      <app-review-page (reviewPageValidated)="validateStepperOne($event)"></app-review-page>
+      <mat-divider></mat-divider>
+      <div class="w-100">
+        <div class="row m-0">
+          <div class="col-6 d-flex m-0 mt-3 p-0">
+            <button mat-raised-button matStepperPrevious  class="previousBtn" (click)="prevStep(3)">Back</button>
+         
+            <!-- <button class="btn btn-back" (click)="prevStep(3)">Back</button> -->
+          </div>
+          <div class="col-6 d-flex m-0 mt-3 p-0 d-flex justify-content-end">
+            <button (click)="nextStep(4)" class="nextBtn border">Submit</button>
+            <!-- <button class="btn ml-auto btn-next" (click)="nextStep(4)">
+              Submit
+            </button> -->
+          </div>
+        </div>
+      </div>
+    </mat-step>
+    <mat-step label="Instant Offer">
+      <app-seller-instant-offer [callAPI]="instantOfferAPICall" [srcImages]="srcImages"></app-seller-instant-offer>
+      <mat-divider></mat-divider>
+      <!-- <div class="w-100">
+        <div class="row m-0">
+          <div class="col-6 d-flex m-0 mt-3 p-0">
+            <button class="btn btn-back" (click)="prevStep(4)">Back</button>
+          </div>
+        </div>
+      </div> -->
+    </mat-step>
+
+
+    <!-- Icon overrides. -->
+    <!-- <ng-template matStepperIcon="phone">
+      <mat-icon>call_end</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="chat">
+      <mat-icon>forum</mat-icon>
+    </ng-template> -->
+  </mat-horizontal-stepper>
+</div>

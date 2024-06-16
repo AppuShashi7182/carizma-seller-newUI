@@ -1,0 +1,58 @@
+mat-form-field {
+  padding: 3px 1px;
+}
+mat-form-field {
+  width: 80%;
+  height: 80%;
+}
+.makeModel{
+  margin-left: 2rem;
+}
+
+.btn-go {
+  margin-bottom: 14px;
+  width: 50%;
+  border: 2px solid #67A6F8;
+  background: #67A6F8;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding-bottom: 15px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 15px;
+}
+.btn-go:hover{
+  box-shadow: 2px 1px 5px black ;
+}
+
+
+mat-form-field {
+  font-size: 12px;
+}
+
+
+/* .mat-mdc-raised-button.mat-primary {
+ --mdc-protected-button-container-color: #BDF279;
+ --mdc-protected-button-label-text-color: black;
+} */
+
+
+#mat-mdc-input-element  {
+  display: inline-block;
+  font-family: 'Open Sans';
+  font-size: 1.2rem;
+}
+
+.getOfferBtn{
+  background-color: #67A6F8;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 30px;
+  width: 100%;
+  border-radius: 10px;
+}

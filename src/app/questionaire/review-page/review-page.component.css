@@ -1,0 +1,128 @@
+.review-item-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.lbl {
+  font-weight: 500;
+}
+
+.summary-ans {
+  padding: 8px;
+  /* margin: px; */
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #e1e1e1;
+}
+
+.mat-card {
+  height: 100%;
+  padding: 20px;
+  margin: 15px auto;
+  box-shadow: 4px#6e6e6e;
+  margin-bottom: 25px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 6px;
+}
+
+.mat-divider {
+  border-top-width: 2px;
+  border-top-style: dashed;
+
+  border-top-color: #6e6e6e;
+}
+
+.content-edit {
+  font-size: 14px;
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.checkbox {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-checkbox-style {
+  border: 1px solid rgb(145, 143, 143);
+}
+
+.custom-checkbox-style:hover {
+  border: 2px solid black !important;
+}
+
+mat-icon {
+  color: #000000;
+}
+
+/* Redes Sociais */
+.circle-button {
+  font-family: 'Open Sans', sans-serif;
+  color: #ccc;
+  display: inline-block;
+  font-size: 2rem;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+/* .circle-button:hover{
+  animation: circle-anim 0.3s ease backwards;
+  transition: all 0.4s ease;
+} */
+
+.grow-container {
+  display: inline-block;
+  margin: 1em;
+}
+
+.to-twitter {
+  background: #ececec;
+  padding: 8px;
+  box-shadow: unset;
+  border: unset;
+  cursor: pointer;
+}
+
+.to-twitter:hover {
+  background-color: white;
+}
+
+.content-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: "Open Sans, Helvetica Neue, sans-serif"
+}
+
+.text-secondary {
+  color: darkgrey;
+  font-size: 1rem;
+  font-weight: 400;
+  /* color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important; */
+}
+@keyframes circle-anim {
+  0% {
+  }
+
+  90% {
+    padding: 0.35em;
+    margin: -0.35em;
+  }
+
+  100% {
+    padding: 0.25em;
+    margin: -0.25em;
+  }
+}
+
+
+.collapse
+{
+  visibility: visible !important;
+}
+.edit-card-icon
+{
+  left: -32px;
+  position: absolute;
+}

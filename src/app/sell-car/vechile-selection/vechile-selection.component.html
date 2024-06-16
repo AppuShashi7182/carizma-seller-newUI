@@ -1,0 +1,136 @@
+<app-car-loader *ngIf="isLoading"></app-car-loader>
+
+<!-- <form [formGroup]="manualVechileSelectionForm" (submit)="onSubmit()">
+  <div class="container-fluid" style="padding-top: 15px">
+    <div class="row">
+      <div class="col-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Year</mat-label>
+          <mat-select style="font-size: 1.1rem;" matNativeControl (selectionChange)="yearSelectionChange($event)" formControlName="yearSelected"
+            name="yearSelected">
+            <mat-option *ngFor="let year of VechileRegisterationList" [value]="year">
+              {{ year }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field appearance="outline">
+          <mat-label>
+            Make
+          </mat-label>
+          <input style="font-size: 1.1rem;" type="text" #state placeholder="Select Make" aria-label="Number" name="Make" matInput
+            formControlNamehj="selectedMake" [formControl]="makelistControl" [matAutocomplete]="autoModel" required />
+          <mat-hint *ngIf="makelistControl.value == ''" class="text-center">Click to see Make</mat-hint>
+          <mat-autocomplete #autoModel="matAutocomplete" (optionSelected)="makeSelectionChange($event)">
+            <mat-optgroup style="  font-weight: bold;" *ngFor="let group of makesList | async"
+              [label]="group.groupName">
+              <mat-option *ngFor="let make of group.makes" [value]="make">
+                {{ make }}
+              </mat-option>
+            </mat-optgroup>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field appearance="outline">
+          <mat-label>
+            Model
+          </mat-label>
+          <input style="font-size: 1.1rem;" type="text" placeholder="Select Model" matInput formControlNamehj="selectedModel" name="selectedModel"
+            [formControl]="modelControl" [matAutocomplete]="autoMake" required />
+          <mat-hint *ngIf="modelControl.value === ''" class="text-center">Click to see Model</mat-hint>
+          <mat-autocomplete #autoMake="matAutocomplete" (optionSelected)="modelSelectionChange($event)">
+            <mat-option *ngFor="let option of modelList | async" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+
+      <div class="col-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Trim</mat-label>
+          <mat-hint *ngIf="!selectedTrim.value" class="text-center">Select Trim</mat-hint>
+          <mat-select style="font-size: 1.1rem;" matNativeControl [formControl]="selectedTrim" name="trim"
+            (selectionChange)="trimSelectionChange()">
+            <mat-option *ngFor="let trim of trimList | async" [value]="trim">
+              {{ trim }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-12 text-center">
+        <div class="d-flex justify-content-center mb-4 w-100">
+          <button type="button" class="btn getOfferBtn ml-2">GET MY OFFER</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</form> -->
+<form [formGroup]="manualVechileSelectionForm" class="makeModel" style="height: 70%;margin:10px 0;" (ngSubmit)="onSubmit()">
+  
+  <!-- <mat-grid-list  cols="4" rowHeight="50px" gutterSize="3px"> -->
+  <div class="mb-3">
+  <div class="form-group ml-6"  style="width: 90%;">
+    <select id="year" class=" form-control form-select form-select-md" aria-label=".form-select-md example" formControlName="year" (change)="yearSelectionChange($event)" [(ngModel)]="modelDetails.year">
+      <option value=""  disabled>Select Year</option>
+          <option *ngFor="let year of VechileRegisterationList" [value]="year" >{{year}}</option>
+    </select>
+
+    <div *ngIf="manualVechileSelectionForm.get('year')?.touched && manualVechileSelectionForm.get('year')?.hasError('required')" class="text-danger">
+      Year is required.
+    </div>
+  </div>
+</div>
+  <div colspan="4"rowspan="1.5" class="mb-3">
+  <div class="form-group ml-6" style="width: 90%;">
+    <!-- <input type="text" id="make" class="form-control" placeholder="Enter Make" [(ngModel)]="modelDetails.make" formControlName="make"> -->
+    <select  id="make" class=" form-control form-select form-select-md" aria-label=".form-select-md example" formControlName="make" (change)="makeSelectionChange($event)" [(ngModel)]="modelDetails.make">
+      
+      <option value=""  disabled>Select Make</option>
+      <optgroup *ngFor="let group of makesList | async"
+      [label]="group.groupName">
+        <option *ngFor="let make of group.makes" [value]="make" >{{make}}</option>
+      </optgroup>
+      
+    </select>
+    <!-- Display error only if the field is touched -->
+    <div *ngIf="manualVechileSelectionForm.get('make')?.touched && manualVechileSelectionForm.get('make')?.hasError('required')" class="text-danger">
+      Make is required.
+    </div>
+  </div>
+</div>
+<div colspan="4" rowspan="1.5" class="mb-3">
+  <div class="form-group ml-6" style="width: 90%;">
+    <!-- <input type="text" id="model" class="form-control" placeholder="Enter Model" [(ngModel)]="modelDetails.model" formControlName="model"> -->
+    <select id="year" class="form-control form-select form-select-md" aria-label=".form-select-md example" formControlName="model" (change)="modelSelectionChange($event)" [(ngModel)]="modelDetails.model">
+      <option value=""  disabled>Select Model</option>
+          <option *ngFor="let model of modelList | async" [value]="model" >{{model}}</option>
+    </select>
+    <!-- Display error only if the field is touched -->
+    <div *ngIf="manualVechileSelectionForm.get('model')?.touched && manualVechileSelectionForm.get('model')?.hasError('required')" class="text-danger">
+      Model is required.
+    </div>
+  </div>
+</div>
+  <div colspan="4" rowspan="1.5" class="mb-3">
+  <div class="form-group ml-6"  style="width: 90%;">
+    <select id="trim" class="form-control form-select form-select-md" formControlName="trim" [(ngModel)]="modelDetails.trim">
+      <option value="" disabled>Select Trim</option>
+          <option *ngFor="let trim of trimList | async" [value]="trim" >{{trim}}</option>
+    </select>
+
+    <div *ngIf="manualVechileSelectionForm.get('trim')?.touched && manualVechileSelectionForm.get('trim')?.hasError('required')" class="text-danger">
+      Trim is required.
+    </div>
+  </div>
+</div>
+
+<div colspan="4" class="w-100">
+  <div class="d-flex justify-content-center w-100">
+    <button type="button" (click)="onSubmit()" class="btn getOfferBtn ml-2">GET MY OFFER</button>
+</div>
+</div>
+<!-- </mat-grid-list> -->
+</form>

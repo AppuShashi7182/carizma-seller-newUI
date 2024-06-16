@@ -1,0 +1,314 @@
+<div style="background-color: white; padding: 25px">
+  <!--  -->
+  <!-- <mat-card class="question-card">
+    <mat-card-content>
+      <div fxLayout="column" class="seller-contact">
+        <div class="pricingtable">
+          <div class="top">
+            <h2>Basic</h2>
+          </div>
+
+          <ul>
+            <li><strong>Full</strong> Email Support</li>
+            <li><strong>25GB</strong> of Storage</li>
+            <li><strong>5</strong> Domains</li>
+            <li><strong>10</strong> Email Addresses</li>
+          </ul>
+
+          <hr />
+
+          <h1><sup>$</sup>25</h1>
+          <p>per month</p>
+
+          <a href="#">Sign Up</a>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card> -->
+  <div class="container">
+    <mat-card>
+      <img src="assets/img/green-light.png" alt="green-light" class="signal">
+      <div class="backgroundImage">
+        <img src="assets/images/bestPrice.png" alt="background" class="">
+      </div>
+      <div class="chequeContainer">
+        <img src="assets/images/cheque.png" alt="background" class="chequeImage">
+      </div>
+      <div style="text-align:center;margin-top:-3rem">
+        <p class="offerText1">Voila! We'd love to make an offer for your car of</p>
+        <ng-container *ngIf="!reviewService.offerPrice || reviewService.offerPrice < 1">
+          <br />
+          <div class="col-12 alert alert-warning" role="alert" 
+          style="background: white;
+          border: white;">
+            <h2>
+              <strong>
+                Voila! We’d love to make an offer for your car. </strong>Our team is working on it and will reach out to you shortly.
+            </h2>
+          </div>
+        </ng-container>
+        <p *ngIf="reviewService.offerPrice" class="currency">{{ reviewService.offerPrice | currency }}</p>
+        <p class="vehicleDetails"> {{
+          selectVechileDetails?.make+" "+selectVechileDetails?.model 
+          }}</p>
+          
+          <p class="vehicleDetails">{{selectVechileDetails?.year}} Year,{{ this.sellerDetails?.vehicleDetails?.mileage}} miles</p>
+          <ng-container >
+            <p>Please login to Accept or Reject this offer</p>
+            <div class="col-md-12" style="display:flex;justify-content: center;">
+              <div class="col-md-4" style="display: flex; justify-content: flex-start;">
+            <button mat-raised-button class="ml-2 continue-to"
+            (click)="routeToDashboard()">
+            Register as Guest
+          </button>
+        </div>
+        </div>
+          </ng-container>
+           <!-- <div class="row mt-3">
+            <div class="display-inline-block">
+              <span class="car-make">{{ selectVechileDetails?.year }}</span>
+              <span class="h6 ml-2 text-secondary">{{ this.sellerDetails?.vehicleDetails?.mileage }} miles</span>
+            </div>
+          </div> -->
+      </div>
+      <!-- <mat-card-content style="overflow: hidden">
+        <div class="row"> -->
+          <!-- <div class="col-sm-12 col-md-3 col-lg-3">
+            <div class="card shadow-md">
+              <div style="background-color: #eff0f1; border-radius: 4px">
+                <div class="vehica-car-card__featured">
+                  <div class="vehica-car-card__featured__inner">Best Offer</div>
+                </div>
+                <img [src]="srcImages" data-sizes="auto" alt="Bentley Mulsanne 4-door sedan blue"
+                  class="lazyautosizes lazyloaded" />
+              </div>
+            </div>
+          </div> -->
+          <!-- <div class="col-sm-12 col-md-9 col-lg-9"> -->
+            <!-- <div class="row mb-0 mt-3">
+              <span title="Bentley Mulsanne 4-door sedan blue" class="vehica-car-card-row__name">
+                {{
+                " " +
+                selectVechileDetails?.make +
+                " " +
+                selectVechileDetails?.model
+                }}
+              </span>
+              <div class="blockquote">
+                <span>Blind spot alert,</span>
+                <span>Bluetooth,</span>
+                <span>Keyless start</span>
+              </div>
+            </div> -->
+            <!-- <div class="row mt-3">
+              <div class="display-inline-block">
+                <span class="car-make">{{ selectVechileDetails?.year }}</span>
+                <span class="h6 ml-2 text-secondary">{{ this.sellerDetails?.vehicleDetails?.mileage }} miles</span>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div style="font-weight: 400">
+                <span class="h6 text-secondary text-danger">Location Zip Code :
+                </span>
+                <span class="vehica-car-card-row__info-more__value">
+                  {{ this.sellerDetails?.vehicleDetails?.zipCode }}
+                </span>
+              </div>
+            </div> -->
+            <!-- <ng-container *ngIf="!reviewService.offerPrice || reviewService.offerPrice < 1">
+              <br />
+              <div class="col-12 alert alert-warning" role="alert">
+                <h2>
+                  <strong>
+                    Unable to calculate the instant offer at the moment </strong>and our customer care team will reach
+                  out to you shortly.
+                </h2>
+              </div>
+            </ng-container> -->
+            <!-- <div class="container mt-5" *ngIf="reviewService.offerPrice && reviewService.offerPrice > 0">
+              <div class="row text-right">
+                <div class="vehica-car-card-row__price-desktop">
+                  {{ reviewService.offerPrice | currency }}
+                </div>
+                <div class="vehica-car-card-row__calculate">
+                  <a title="" target="_blank"><span>Best Deal</span></a>
+                </div>
+              </div>
+            </div> -->
+            <!-- <div class="row mt-5">
+              <ng-container *ngIf="reviewService.offerPrice"> -->
+                <!-- <div class="col-sm-6 col-md-12 col-lg-12 ng-star-inserted d-flex justify-content-center">
+                  
+
+                </div> -->
+                <!-- <div class="col-sm-6 col-md-12 col-lg-12 ng-star-inserted d-flex justify-content-center">
+                  <h2>Please login to accept/Reject the offer</h2>
+                  <button mat-raised-button class="ml-2  btn float-right btn-success offer-btn"
+                    (click)="routeToDashboard()">
+                    CONTINUE
+                  </button>
+                </div> -->
+                <!-- <div
+                  class="col-sm-6 col-md-8 col-lg-8 d-flex justify-content-end"
+                >
+                  <button
+                    type="button"
+                    class="btn float-left btn-success offer-btn"
+                    (click)="accept()"
+                  >
+                    <mat-icon>thumb_up</mat-icon> &nbsp;Accept Offer
+                  </button>
+                </div>
+                <div
+                  class="col-sm-6 col-md-4 col-lg-4 d-flex justify-content-end"
+                >
+                  <button
+                    type="button"
+                    class="btn float-right btn-danger offer-btn"
+                    (click)="confirmDialog()"
+                  >
+                    <mat-icon>thumb_down</mat-icon> &nbsp; Reject
+                  </button>
+                </div> -->
+              <!-- </ng-container>
+            </div>
+          </div> -->
+
+        <!-- </div>
+      </mat-card-content> -->
+    </mat-card>
+  </div>
+
+  <!-- <div
+    id="vehica-car-9664"
+    data-id="9664"
+    class="vehica-car-card-row-wrapper vehica-car"
+  >
+    <div class="vehica-car-card-row">
+      <div class="vehica-car-card-row__inner">
+        <div class="vehica-car-card-row__image">
+          <div class="vehica-car-card__featured">
+            <div class="vehica-car-card__featured__inner">Best Offer</div>
+          </div>
+          <div class="vehica-car-card__image-bg">
+            <div class="vehica-car-card__image" style="padding-top: 55.5224%">
+              <img
+                [src]="srcImages"
+                data-sizes="auto"
+                alt="Bentley Mulsanne 4-door sedan blue"
+                class="lazyautosizes lazyloaded"
+                sizes="248px"
+              />
+              <div class="vehica-car-card__image-info">
+                <span class="vehica-car-card__image-info__photos"
+                  ><i class="far fa-images"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="vehica-car-row__content">
+          <span
+            title="Bentley Mulsanne 4-door sedan blue"
+            class="vehica-car-card-row__name"
+          >
+            {{
+              " " +
+                selectVechileDetails?.make +
+                " " +
+                selectVechileDetails?.model
+            }}
+          </span>
+          <div
+            class="vehica-car-card__price-mobile"
+            style="color: #08a182 !important"
+          >
+            $14,900
+          </div>
+          <div class="vehica-car-card-row__secondary-attributes">
+            <span class="vehica-car-card-row__secondary-attribute"
+              ><span class="vehica-car-card-row__secondary-attribute__value"
+                ><span>Blind spot alert</span>
+                <span class="vehica-car-card-row__secondary-attribute__comma"
+                  >,</span
+                ></span
+              ></span
+            >
+            <span class="vehica-car-card-row__secondary-attribute"
+              ><span class="vehica-car-card-row__secondary-attribute__value"
+                ><span>Bluetooth</span>
+                <span class="vehica-car-card-row__secondary-attribute__comma"
+                  >,</span
+                ></span
+              ></span
+            >
+            <span class="vehica-car-card-row__secondary-attribute"
+              ><span class="vehica-car-card-row__secondary-attribute__value"
+                ><span>Keyless start</span>
+                <span class="vehica-car-card-row__secondary-attribute__comma"
+                  >,</span
+                ></span
+              ></span
+            >
+          </div>
+          <div class="vehica-car-card__info">
+            <div class="vehica-car-card__info__single">
+              <i class="fas fa-circle"></i>
+              <span>{{ selectVechileDetails?.year }}</span>
+            </div>
+            <div class="vehica-car-card__info__single">
+              <i class="fas fa-circle"></i>
+              <span
+                >{{ this.sellerDetails?.vehicleDetails?.mileage }} miles</span
+              >
+            </div>
+           
+          </div>
+          <div class="vehica-car-card-row__info-more">
+            <span class="vehica-car-card-row__info-more__label">
+              Location: </span
+            ><span class="vehica-car-card-row__info-more__value">
+              {{ this.sellerDetails?.vehicleDetails?.zipCode }}
+            </span>
+          </div>
+
+          <div class="container mt-5">
+            <div class="row">
+              
+              <div class="vehica-car-card-row__price-desktop">
+                {{ offerPrice | currency }}
+              </div>
+              <div class="vehica-car-card-row__calculate">
+                <a title="" target="_blank"><span>Best Deal</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col">
+              <button
+                type="button"
+                class="btn float-left btn-success offer-btn"
+              >
+                <mat-icon>thumb_up</mat-icon> &nbsp;Approve Offer
+              </button>
+            </div>
+            <div class="col">
+              <button
+                type="button"
+                class="btn float-right btn-danger offer-btn"
+              >
+                <mat-icon>thumb_down</mat-icon> &nbsp; Reject
+              </button>
+            </div>
+          </div>
+        </div>
+        
+
+        <br />
+      </div>
+      <br />
+      <br />
+    </div>
+    <br />
+  </div> -->
+</div>

@@ -1,0 +1,17 @@
+<!-- <span class="container11">
+  <div class="switch-wrapper">
+    <input id="yes" type="radio"  [checked]="switchData" (input)="onSearchChange($event.target)" name="switch" />
+    <input id="no" type="radio"  [checked]="!switchData" (input)="onSearchChange($event.target)" name="switch" />
+    <label for="yes">Yes</label>
+    <label for="no">No</label>
+    <span class="highlighter"></span>
+  </div>
+</span> -->
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-secondary active">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+  </label>
+  <label class="btn btn-secondary">
+    <input type="radio" name="options" id="option2" autocomplete="off"> No
+  </label>
+</div>

@@ -1,0 +1,66 @@
+.seller-contact mat-form-field {
+  width: 50%;
+}
+
+.seller-contact {
+  justify-content: center;
+  align-items: center;
+}
+
+.question-card {
+  max-width: 80%;
+  min-width: 300px;
+  margin-bottom: 25px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 6px;
+}
+
+.checkbox {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-checkbox-style {
+  border: 1px solid rgb(145, 143, 143);
+}
+
+.custom-checkbox-style:hover {
+  border: 2px solid black !important;
+}
+
+.breadcrumb {
+  font-size: 1.4rem !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-can-float .mat-form-field-should-float .mat-form-field-label {
+  transform: translateY(-1.4em) translateX(1em) scale(.80);
+  color: #ff0000;
+}
+
+.btn-go {
+  margin-bottom: 14px;
+  width: 50%;
+  border: 2px solid #67A6F8;
+  background: #67A6F8;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding-bottom: 15px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 15px;
+}
+.btn-go:hover{
+  box-shadow: 2px 1px 5px black ;
+}
+
+
+.offer-button {
+  height: 45px;
+  padding: 7px 0;
+  margin-top: 30px;
+}

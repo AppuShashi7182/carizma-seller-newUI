@@ -1,0 +1,31 @@
+.content-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .collapse
+{
+  visibility: visible !important;
+}
+
+.btn-go {
+  margin-bottom: 14px;
+  width: 50%;
+  border: 2px solid #67A6F8;
+  background: #67A6F8;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding-bottom: 15px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 15px;
+}
+.btn-go:hover{
+  box-shadow: 2px 1px 5px black ;
+}

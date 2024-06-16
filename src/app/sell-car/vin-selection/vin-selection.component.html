@@ -1,0 +1,35 @@
+<app-car-loader *ngIf="isLoading"></app-car-loader>
+
+
+<form>
+  <mat-grid-list cols="4" rowHeight="50px" gutterSize="2px">
+    <mat-grid-tile colspan="4" rowspan="1.5" style="padding-bottom: 5%">
+      <mat-form-field appearance="outline" required>
+        <mat-label>VIN</mat-label>
+        <input style="font-size: 1.1rem;margin-top: 20px;" matNativeControl matInput autocomplete="doNotAutoComplete" placeholder="Enter the 17-digit VIN"
+          name="VIN" maxlength="17" [formControl]="vin" required />
+        <div style="z-index: 100; position: absolute;color:red;margin-top:2rem" *ngIf="errorMessage?.required"> VIN is
+          required</div>
+          <div style="z-index: 100; position: absolute;color:red;margin-top:2rem" *ngIf="errorMessage?.minlength">Please provide Valid
+            VIN</div>
+            <div style="z-index: 100; position: absolute;color:red;margin-top:2rem" *ngIf="errorMessage?.vinErrorText">{{errorMessage['vinErrorText']}}</div>
+          </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="4"><a class="mat-subtitle-2" (click)="openBottomSheet()">Where is my VIN?</a>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="4">
+      <!-- <button mat-raised-button class="btn-go" (click)="go()">
+        GET MY OFFER -->
+        <!-- <div class="row">
+          <div class="col-10"> GET MY OFFER</div>
+          <div class="col-2 text-right" style="font-size: larger;">
+            >
+          </div>
+        </div> -->
+      <!-- </button> -->
+      <div class="d-flex justify-content-center w-100">
+        <button type="button" (click)="go()" class="btn getOfferBtn ml-2 ">GET MY OFFER</button>
+    </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>

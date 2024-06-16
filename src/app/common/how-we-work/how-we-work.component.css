@@ -1,0 +1,66 @@
+.container{
+    background-color: white;
+}
+.rectangleHighlighter{
+    height: 8rem;
+    width: 2rem;
+    color: #67A6F8;
+    background: #67A6F8;
+    margin-right: 40px;
+}
+.headerText{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.body{
+    margin-top: 5rem;
+}
+.images{
+    margin:2rem 4rem;
+    width: auto;
+    height: auto;
+    height: 10rem;
+}
+.connection{
+    margin-left: -20px;
+    margin-top: -35px !important;
+}
+.dealText{
+    margin-left: 20px;
+    margin-top: 35px !important;
+}
+.connection2{
+    margin-top: -15px !important;
+    margin-left: 15px;
+}
+.textHeader{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.text{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.signal{
+    margin-left: 16px;
+}
+.yellowSignal{
+    margin-left: -6rem;
+}
+.getPriceBtn{
+    background-color: #67A6F8;
+    font-size: 1.1rem;
+    padding: 0.5rem 6rem;
+    border-radius: 10px;
+}
+.getPriceSection{
+    background-color: #212121;
+    height: 40vh;
+}
+.sellingtText{
+    color: white;
+    font-size: 2.5rem;
+}
+.towing-image {
+    height: 26rem !important;
+}

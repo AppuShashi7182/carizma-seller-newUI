@@ -1,0 +1,107 @@
+$success:       #35A255 !default;
+$primary:       #007CBB !default;
+
+.car-header {
+  
+    font-size: 1rem;
+    margin: 25px 0 0 95px;
+    align-items: center;
+    font-weight: 500 !important;
+    background-color: #f4f4f4;
+    background-repeat: repeat-x;
+  }
+  
+  .car-stepper-content {
+    margin: 25px 100px 25px 95px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 9px;
+    min-width: 400px;
+    min-height: 80%;
+  }
+  .mat-step-header .mat-step-label{
+    color: rgba(0, 0, 0, .54)
+  }
+  .mat-step-header .mat-step-icon {
+    color: rgba(0, 0, 0, .54);
+    background-color: transparent;
+  }
+  .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+    background-color: $success;
+    background-color: transparent !important;
+    color: $success;
+    +.mat-step-label{
+      color: $success !important;
+    }
+  }
+
+  .border{
+    border: none;
+  }
+  
+/* Add the grey border and dot for next steps */
+.mat-step-header .mat-step-icon-state-default {
+    border-radius: 50%;
+    border: 2px solid $primary;
+    background-color: transparent !important;
+    color: $primary;
+    +.mat-step-label{
+      color: $primary !important;
+    }
+  }
+  .mat-step-header .mat-step-icon-selected{
+    border-radius: 50%;
+    border: 2px solid $primary;
+    background-color: transparent !important;
+    color: $primary;
+    +.mat-step-label{
+      color: $primary !important;
+    }
+  }
+  .btn-width {
+    width: 69px;
+    font-weight: bolder;
+  }
+  .btn-back {
+    font: inherit;
+    box-sizing: border-box;
+    margin: 0;
+    line-height: inherit;
+    overflow: visible;
+    background-color: #fff;
+    border-left: 2px solid #0a3453;
+    border-top: 2px solid #0a3453;
+    border-bottom: 2px solid #0a3453;
+    border-right: 2px solid #0a3453;
+    height: 50px;
+    width: 140px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 30px;
+    color: #767676;
+    font-family: Arial, Helvetica, sans-serif;
+    border-color: #757575 !important;
+    cursor: pointer;
+  }
+  .btn-next {
+    font: inherit;
+    box-sizing: border-box;
+    line-height: inherit;
+    overflow: visible;
+    background-color: #fff;
+    border-left: 2px solid #0a3453;
+    border-top: 2px solid #0a3453;
+    border-bottom: 2px solid #0a3453;
+    border-right: 2px solid #0a3453;
+    height: 50px;
+    width: 140px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 30px;
+    color: #767676;
+    background: linear-gradient(to right, #acb6e5, #86fde8);
+    font-family: Arial, Helvetica, sans-serif;
+    border-color: #757575 !important;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,26 @@
+.modal-header {
+    border-bottom: 1px solid black;
+}
+
+.modal-body {
+    border-bottom: 1px solid black;
+}
+
+
+.container {
+    border-top: 10px solid red !important;
+}
+
+.cancelBtn {
+    border: 2px solid maroon;
+    color: maroon;
+    padding: 5px 1rem;
+    border-radius: 10px;
+}
+
+.okBtn {
+    border: 2px solid green;
+    color: green;
+    padding: 5px 1rem;
+    border-radius: 10px;
+}

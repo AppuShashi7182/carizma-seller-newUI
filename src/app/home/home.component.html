@@ -1,0 +1,406 @@
+<section id="home" class="home">
+
+  <div class="container-fluid">
+    <div class="row sellContainer">
+      <div class="col-lg-5">
+        <p class="sellCarText">Sell your car in <span class="sellCarTextColored">any condition</span> hassle free!</p>
+        <p class="onlineQuote">Online quotes and immediate payment on pick up!</p>
+        <app-car-selection></app-car-selection>
+        <br /><br />
+      </div>
+      <div class="col-lg-7">
+        <div class="container-fluid" >
+          <div class="d-flex justify-content-center">
+            <img class="background " src="../../../assets/images/home-side-image.png" alt="background" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section><!-- End Hero Section -->
+
+<section id="clients" class="clients" style="padding: 0 4rem;">
+
+  <div class="container-fluid">
+    <div class="d-flex justify-content-center">
+      <img class="dots " src="../../../assets/images/threeDotsWithoutBackground.png" alt="dots" />
+    </div>
+    <h5 class="popularCarstxt">Popular Cars We Buy</h5>
+    <div>
+      <img src="assets/images/carCompanies.png" style="height: 100%; width: 100%; " alt="">
+    </div>
+    <!-- <div class="row gy-4">
+
+      <div class="col-xl-2 col-md-3 col-6 client-logo">
+        <img src="assets/img/clients/logo1.png" class="img-fluid" alt="">
+      </div>
+
+      <div class="col-xl-2 col-md-3 col-6 client-logo">
+        <img src="assets/img/clients/logo2.png" class="img-fluid" alt="">
+      </div>
+
+      <div class="col-xl-2 col-md-3 col-6 client-logo">
+        <img src="assets/img/clients/logo3.png" class="img-fluid" alt="">
+      </div>
+
+      <div class="col-xl-2 col-md-3 col-6 client-logo">
+        <img src="assets/img/clients/logo4.png" class="img-fluid" alt="">
+      </div>
+
+      <div class="col-xl-2 col-md-3 col-6 client-logo">
+        <img src="assets/img/clients/logo5.png" class="img-fluid" alt="">
+      </div>
+
+      <div class="col-xl-2 col-md-3 col-6 client-logo">
+        <img src="assets/img/clients/logo6.png" class="img-fluid" alt="">
+      </div>
+
+    </div> -->
+
+  </div>
+
+</section>
+
+<section id="how-it-works" class="how-it-works">
+
+  <!--  Section Title -->
+  <!-- <div class="container section-title">
+    <p>We follow 3 simple steps</p>
+  </div> -->
+  <!-- End Section Title -->
+  <div class="d-flex justify-content-center">
+    <img class="dots " src="../../../assets/images/threeDotsWithoutBackground.png" alt="dots" />
+  </div>
+  <h5 class="howItWorksText">HOW IT WORKS</h5>
+    <div class="container-fluid">
+
+      <div class="row gy-4">
+  
+        <div class="how-it-works-light col-lg-3">
+          
+          <div class="text-align-center">
+            <img src="assets/img/red-yellow-green.gif" align="center" alt="yellow-light">
+          </div>
+          <!-- <ng-container *ngIf="showImage1">
+            <img src="assets/img/red-light-traffic.png" align="center" alt="yellow-light">
+          </ng-container>
+          <ng-container *ngIf="showImage2">
+            <img src="assets/img/yellow-light-traffic.png" align="center" alt="yellow-light">
+          </ng-container>
+          <ng-container *ngIf="showImage3">
+            <img src="assets/img/green-light-traffic.png" align="center" alt="yellow-light">
+          </ng-container> -->
+        </div>
+  
+        <div class="col-lg-9">
+          <div [@slideIn1]="animationState" class="slide-container">
+  
+          <div class="margin-top-62">
+            <h2 class="how-it-works-header">Tell Us about <span class="step1ColoredText">your car</span></h2>
+            <p class="black-color how-it-works-text">Provide information regarding the current state of your car and other basic details.
+              You'll receive
+              your offer!</p>
+          </div>
+          <br /><br />
+  </div>
+
+  <div [@slideIn2]="animationState" class="slide-container">
+          <div class="margin-top-62">
+            <h2 class="how-it-works-header">Get your <span class="step2ColoredText">best price</span></h2>
+            <p class="black-color how-it-works-text">Receive a no-hassle offer that is good for up to 7 days. All we need is information about your Car.</p>
+          </div>
+          <br /><br />
+        </div>
+        <div [@slideIn3]="animationState" class="slide-container">
+          <div class="margin-top-62">
+            <h2 class="how-it-works-header">We pick it, You <span class="step3ColoredText">get paid</span></h2>
+            <p class="black-color how-it-works-text">Our team member will hand you a check and pick up your car</p>
+          </div>
+          </div>
+          <!-- <div class="d-flex align-items-center mt-20 hoverLink" (click)="navigate('how-we-work')">
+            <h5 style="font-weight: bold;" class="text-format-open-sans" >UNDERSTAND THE PROCESS BETTER</h5>
+            <mat-icon class="ml-2 arrowicon">arrow_right_alt</mat-icon>
+          </div> -->
+        </div>
+      </div>
+      <div>
+      <img class="mapBackground" src="../../../assets/images/mapBackground.png"
+      alt="mapBackground" />
+    </div>
+    </div>
+
+
+</section>
+<!-- End How It Works Section -->
+<!-- Testimonials Section - Home Page -->
+<section id="testimonials" class="testimonials">
+  <p class="testimonialHeader text-format-montserrat">
+    Listen to what our customers have to say :)
+  </p>
+  <div>
+
+    <div class="row align-items-center">
+
+      <div class="col-lg-12 info">
+        <div class="d-flex align-items-center">
+          <div >
+            <ng-container *ngIf="!mobileView">
+              <img src="assets/images/threeDotsWithoutBackground.png" align="center" alt="yellow-light">
+              <p class="testimonialTestHeader text-format-montserrat">Clients Testimonials</p>
+            </ng-container>
+      </div>
+      <div class="quoteImg">
+        <img src="assets/images/testimonialImg.png" align="center" alt="yellow-light">
+      </div>
+      <ng-container *ngIf="!mobileView">
+        <div class="testimonailBackground">
+        <img src="assets/images/testimonailBackground.png" class="testimonailBackgroundImg" align="center" alt="testimonailBackgroundImg">
+      </div>
+    </ng-container>
+        <div class="testimonialContainer mt-5 col-lg-5">
+            <div class="testimonial-item">
+              <div class="d-flex">
+                <!-- <img [src]="testimonials[currentCarouselTestimonialIndex].img" class="testimonial-img flex-shrink-0" alt=""> -->
+                <div>
+                  <h3 class="authorName">{{testimonials[currentCarouselTestimonialIndex].author}}</h3>
+                  <h4 class="authorDesignation">{{testimonials[currentCarouselTestimonialIndex].designation}}</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span class="text-format-open-sans">{{testimonials[currentCarouselTestimonialIndex]?.text}}</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<!-- End Testimonials Section -->
+
+<section class="nation-wide-service">
+  <div class="d-flex justify-content-center">
+    <img class="dots " src="../../../assets/images/threeDotsWithoutBackground.png" alt="dots" />
+  </div>
+  <h5 class="howItWorksText mt-5 text-format-montserrat mb-3">NATIONWIDE SERVICES</h5>
+  <ng-container *ngIf="!mobileView">
+  <mat-grid-list cols="3" rowHeight="3:2" style="margin: 0 6rem;">
+    <img class="servicesFlag" src="../../../assets/images/nationWideServicesflag.png" alt="services" />
+    <mat-grid-tile [colspan]="1" [rowspan]="2" class="servicesBlock1">
+      <!-- <div class="col-md-12">
+    <h1 class="carHeader">Nationwide Presence </h1>
+  </div>
+  <div class="col-md-12">
+    <h5 class="carText">Our Reach Extends to Every State in the USA!</h5>
+  </div> -->
+      <div class="col-md-7" class="nationWideContainer">
+        <img class="nationWideBackground" src="../../../assets/images/nationWideBackground.png"
+        alt="services" />
+        <h1 class="carHeader text-format-montserrat">Nationwide Presence </h1>
+        <h5 class="carText text-format-open-sans">Our Reach Extends to Every State in the USA!</h5>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile> <img class="services" src="../../../assets/images/nationWideServices2.png"
+        alt="services" /></mat-grid-tile>
+    <mat-grid-tile> <img class="services" src="../../../assets/images/nationWideServices3.png"
+        alt="services" /></mat-grid-tile>
+    <mat-grid-tile> <div class="presence">
+      <span class="presenceTxt text-format-montserrat">We have our presence across EVERY state in the US</span>
+    </div></mat-grid-tile>
+    <mat-grid-tile> <img class="services" src="../../../assets/images/nationWideServices5.png"
+        alt="services" /></mat-grid-tile>
+    <mat-grid-tile> <img class="services" src="../../../assets/images/nationWideServices6.png"
+        alt="services" /></mat-grid-tile>
+    <div class="carContainer">
+    </div>
+    <mat-grid-tile [colspan]="2" [rowspan]="1" class="">
+      <img class="drivingDream" src="../../../assets/images/drivingdreamBackground.png"
+      alt="services" />
+      <div class="col-md-7" style="padding: 0 2rem">
+        <h1 class="drivingDreamHeader text-format-montserrat">Driving Dreams, One Trade at a Time</h1>
+        <h5 class="carText text-format-open-sans">Over 100,000 Cars Acquired Across the USA!</h5>
+      </div>
+      <div class="col-md-5" style="z-index: 2;">
+        <img class="servicesCar" src="../../../assets/images/nationWideServicesCar.png" alt="services" />
+  
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+  </ng-container>
+  <ng-container *ngIf="mobileView">
+    <!-- <div  style="margin: 0 6rem;">
+      <img class="servicesFlag" src="../../../assets/images/nationWideServicesflag.png" alt="services" />
+      <div class="servicesBlock1">
+        <div class="col-md-12">
+      <h1 class="carHeader">Nationwide Presence </h1>
+    </div>
+    <div class="col-md-12">
+      <h5 class="carText">Our Reach Extends to Every State in the USA!</h5>
+    </div>
+
+      </div>
+      <div> <img class="services" src="../../../assets/images/nationWideServices2.png"
+          alt="services" /></div>
+      <div> <img class="services" src="../../../assets/images/nationWideServices3.png"
+          alt="services" /></div>
+      <div> <img class="services" src="../../../assets/images/nationWideServices5.png"
+          alt="services" /></div>
+      <div> <img class="services" src="../../../assets/images/nationWideServices6.png"
+          alt="services" /></div>
+      <div class="carContainer">
+      </div>
+
+    </div> -->
+    <div class="testimonialContainer mt-5 col-lg-5">
+      <div class="testimonial-item">
+        <div class="d-flex">
+          <div>
+            <div> <img class="services" [src]="nationWideServices[currentNationWideIndex]"
+              alt="services" /></div>
+          </div>
+        </div>
+    </div>
+  </div>
+    </ng-container>
+  <!-- <div class="d-flex align-items-center know-more" (click)="navigate('about')">
+    <h5 style="font-weight: bold;" class="hoverLink text-format-open-sans">KNOW MORE ABOUT US</h5>
+    <mat-icon class="ml-2 arrowicon">arrow_right_alt</mat-icon>
+  </div> -->
+</section>
+
+
+
+<div style="background: white;padding:3rem 0">
+  <div>
+    <img class="backgroundCar" src="../../../assets/images/takeAllCarsBackgroundCar.png" alt="backgroundCar" />
+  </div>
+  <ng-container *ngIf="!mobileView">
+  <div class="d-flex justify-content-center" style="height: 35%">
+    <div class="container-fluid row w-100" id="take-it-all" class="take-it-all p-0">
+      <div class="col-md-6 p-3 textContainer">
+          <img class="dots2" src="../../../assets/images/threeDotsWithoutBackground.png" alt="dots" />
+        <h5 class="takeItAllTextHeader mt-1 text-format-montserrat">WE TAKE IT ALL</h5>
+        <h2 class="takeItAllText text-format-open-sans">We buy any car in any condition</h2>
+      </div>
+      <div class="col-md-6">
+        <img class="takeAllCarsImg " src="../../../assets/images/takeAllCars.png" alt="cars" />
+      </div>
+    
+    </div>
+  
+  </div>
+</ng-container>
+<ng-container *ngIf="mobileView">
+  <div style="height: 35%;">
+  <div class="container-fluid w-100" id="take-it-all" class="take-it-all p-0">
+  <div class="col-md-12 p-3 textContainer">
+      <img class="dots2" src="../../../assets/images/threeDotsWithoutBackground.png" alt="dots" />
+    <h5 class="takeItAllTextHeader mt-1 text-format-montserrat">WE TAKE IT ALL</h5>
+    <h2 class="takeItAllText text-format-open-sans">We buy any car in any condition</h2>
+  </div>
+ 
+</div>
+<div class="container-fluid row w-100" id="take-it-all" class="take-it-all p-0">
+<div class="col-md-12">
+  <img class="takeAllCarsImg " src="../../../assets/images/takeAllCars.png" alt="cars" />
+</div>
+</div>
+</div>
+</ng-container>
+</div>
+
+<section id="faq" class="faq">
+
+  <div class="container-fluid">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4" style="padding-top: 124px;">
+        <div class="content px-xl-5">
+          <h3 style="color: white; margin-bottom: 24px; "><span class="text-format-montserrat">Frequently Asked </span><strong>Questions</strong></h3>
+          <p style="color: white;" class="text-format-open-sans">
+           Do you have a question? Well, we've got answers
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+
+        <div class="faq-container">
+          <div class="faq-item faq-active">
+            <h3><span class="num text-format-open-sans">1.</span> <span style="color: white;">Who are we?</span></h3>
+            <div class="faq-content">
+              <p class="text-format-open-sans">Carizma is a US based company on a mission to make car selling easy.</p>
+              <p class="text-format-open-sans">Behind the scenes, we employ people who care about providing customers a stress-free car selling experience.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num text-format-open-sans">2.</span> <span style="color: white;">How does instant offer work?</span></h3>
+            <div class="faq-content text-format-open-sans">
+              <p>After answering a handful of questions about your car, we provide you with an instant offer, no haggling or sleazy salesman included!
+
+                This offer is based on market value and information provided by you. Once you receive the offer, you have 7 days to accept. No pressure!</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num text-format-open-sans">3.</span> <span style="color: white;">Are you in my State?</span></h3>
+            <div class="faq-content text-format-open-sans">
+              <p>Most likely, yes! We partner with transporters in all 50 states to pick up and move cars right where we need them.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num text-format-open-sans">4.</span> <span style="color: white;">Do I need to clean my car before it’s picked up?</span></h3>
+            <div class="faq-content text-format-open-sans">
+              <p>No scrubbing required, but we do recommend removing all personal items. It doesn’t hurt to sift through any trash to make sure nothing of value is left behind as we cannot guarantee that anything that is towed away will be searched for or returned. Don’t forget to remove your plates.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num text-format-open-sans">5.</span> <span style="color: white;">What do you do with my car?</span></h3>
+            <div class="faq-content text-format-open-sans">
+              <p>It depends on a few things, but most of the time we resell them. Sometimes cars can be scraped if they are in rough shape. Most importantly, we get them out of your driveway!</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<!-- End Faq Section -->
+
+<!-- Features Section - Home Page -->
+
+
+
+<!-- Scroll Top Button -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+    class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<!-- <div id="preloader">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div> -->

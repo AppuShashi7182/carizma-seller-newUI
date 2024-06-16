@@ -1,0 +1,239 @@
+<app-car-loader *ngIf="isLoading"></app-car-loader>
+<div class="container">
+  <div class="row justify-content-center cardWrapper">
+    <div class="col-lg-6 col-md-8 col-sm-10">
+      <div class="card cardContainer">
+        <div class="card-body">
+          <h3 class="card-title justify-content-center breadcrumb text-center mb-4">
+            Login
+          </h3>
+
+          <div class="mt-2 text-secondary h6 text-center mb-2">
+            <span class="card-title">
+              Please Sign in to track and view the status of your order.
+            </span>
+          </div>
+
+          <div class="row">
+            <ng-container *ngIf="logintemplate === true; then login"></ng-container>
+            <ng-container *ngIf="signuptemplate === true; then signup"></ng-container>
+            <!-- <ng-container *ngIf="passwordtemplate === true; then forgotpassword;"></ng-container> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #login>
+    <form [formGroup]="loginFormGroup" class="d-flex flex-column float-left col-12 px-5 justify-content-center">
+      <div class="form-group mt-3">
+        <label for="email">Email</label>
+        <input [ngClass]="{
+            'input-form-success': loginFormGroup.get('email')?.valid,
+            'form-control': true,
+            'input-form-error':
+              loginFormGroup.get('email')?.invalid &&
+              loginFormGroup.get('email')?.touched
+          }" matInput type="email" formControlName="email" />
+        <mat-error class="d-flex justify-content-end" *ngIf="
+            loginFormGroup.get('email')?.invalid &&
+            loginFormGroup.get('email')?.touched
+          ">
+          <span *ngIf="loginFormGroup.get('email')?.hasError('required')">
+            Email is required.
+          </span>
+          <span *ngIf="loginFormGroup.get('email')?.hasError('email')">
+            Please provide valid email.
+          </span>
+        </mat-error>
+      </div>
+      <div class="form-group mt-3">
+        <label for="password">Password</label>
+        <input [ngClass]="{
+            'input-form-success': loginFormGroup.get('password')?.valid,
+            'form-control': true,
+            'input-form-error':
+              loginFormGroup.get('password')?.invalid &&
+              loginFormGroup.get('password')?.touched
+          }" matInput type="password" class="form-control" formControlName="password" id="password" />
+        <mat-error class="d-flex justify-content-end" *ngIf="
+            loginFormGroup.get('password')?.invalid &&
+            loginFormGroup.get('password')?.touched
+          ">
+
+          <span *ngIf="loginFormGroup.get('password')?.hasError('required')">
+            Password is required.
+          </span>
+        </mat-error>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block mt-3" style="cursor: pointer;"
+        (click)="routeToDashboard()">
+        Sign In
+      </button>
+      <mat-error class="d-flex justify-content-center" *ngIf="isLoginFailed">
+        <span>Error occured while login please try again later</span>
+      </mat-error>
+      <hr />
+      <!-- <div class="text-center text-primary mt-3">
+        <a (click)="toggleBetweenLoginPages('forgetPassword')">Forgot Password?</a>
+      </div> -->
+      <div class="text-center mt-3">
+        <span>Don't have an account?</span>
+        <a (click)="toggleBetweenLoginPages('signUp')" class="text-primary mx-2" style="cursor: pointer;display: block;">Sign Up</a>
+      </div>
+   <!--   <div class="row w-100 my-4">
+        <div class="container d-flex align-items-center justify-content-center">
+          <div class="line"><mat-divider></mat-divider></div>
+          <div class="text mat-typography">OR</div>
+          <div class="line"><mat-divider></mat-divider></div>
+        </div>
+      </div>
+
+      <a class="btn btn-outline-dark w-100 text-center d-flex align-items-center justify-content-center center-align"
+        href="/users/googleauth" role="button" style="text-transform: none">
+        <div class="left">
+          <img width="35px" style="margin-bottom: 3px; margin-right: 5px" alt="Google sign-in"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+        </div>
+        Sign in with Google
+      </a>  -->
+    </form>
+  </ng-template>
+  <ng-template #forgotpassword>
+    <form [formGroup]="passwordFormGroup" class="d-flex flex-column float-left col-12 px-5 justify-content-center">
+      <div class="form-group mt-3">
+        <label for="email">Email</label>
+        <input [ngClass]="{
+            'input-form-success': passwordFormGroup.get('email')?.valid,
+            'form-control': true,
+            'input-form-error':
+              passwordFormGroup.get('email')?.invalid &&
+              passwordFormGroup.get('email')?.touched
+          }" matInput type="email" formControlName="email" />
+        <mat-error class="d-flex justify-content-end" *ngIf="
+            passwordFormGroup.get('email')?.invalid &&
+            passwordFormGroup.get('email')?.touched
+          ">
+          <span *ngIf="passwordFormGroup.get('email')?.hasError('required')">
+            Email is required.
+          </span>
+          <span *ngIf="passwordFormGroup.get('email')?.hasError('email')">
+            Please provide valid email.
+          </span>
+        </mat-error>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block mt-3" (click)="routeToDashboard()">
+        Get Password
+      </button>
+
+      <hr />
+      <div class="text-center mt-3">
+        <span>Don't have an account?</span>
+        <a (click)="toggleBetweenLoginPages('signUp')" style="cursor: pointer;display: block;">Sign Up</a>
+      </div>
+      <div class="row w-100 my-4">
+        <div class="container d-flex align-items-center justify-content-center">
+          <div class="line"><mat-divider></mat-divider></div>
+          <div class="text mat-typography">OR</div>
+          <div class="line"><mat-divider></mat-divider></div>
+        </div>
+      </div>
+
+      <a class="btn btn-outline-dark w-100 text-center d-flex align-items-center justify-content-center center-align"
+        href="/users/googleauth" role="button" style="text-transform: none">
+        <div class="left">
+          <img width="35px" style="margin-bottom: 3px; margin-right: 5px" alt="Google sign-in"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+        </div>
+        Sign in with Google
+      </a>
+    </form>
+  </ng-template>
+  <ng-template #signup>
+    <form [formGroup]="signupFormGroup" class="d-flex flex-column float-left col-12 px-5 justify-content-center">
+      <div class="form-group mt-3">
+        <label for="email">Email</label>
+        <input [ngClass]="{
+            'input-form-success': signupFormGroup.get('email')?.valid,
+            'form-control': true,
+            'input-form-error':
+              signupFormGroup.get('email')?.invalid &&
+              signupFormGroup.get('email')?.touched
+          }" matInput type="email" formControlName="email" />
+        <mat-error class="d-flex justify-content-end" *ngIf="
+            signupFormGroup.get('email')?.invalid &&
+            signupFormGroup.get('email')?.touched
+          ">
+          <span *ngIf="signupFormGroup.get('email')?.hasError('required')">
+            Email is required.
+          </span>
+          <span *ngIf="signupFormGroup.get('email')?.hasError('email')">
+            Please provide valid email.
+          </span>
+        </mat-error>
+      </div>
+      <div class="form-group mt-3">
+        <label for="password">Password</label>
+        <input [ngClass]="{
+            'input-form-success': signupFormGroup.get('password')?.valid,
+            'form-control': true,
+            'input-form-error':
+              signupFormGroup.get('password')?.invalid &&
+              signupFormGroup.get('password')?.touched
+          }" matInput type="password" class="form-control" formControlName="password" id="password" />
+
+        <mat-error class="d-flex justify-content-end" *ngIf="
+            signupFormGroup.get('password')?.invalid &&
+            signupFormGroup.get('password')?.touched
+          ">
+          <span *ngIf="signupFormGroup.get('password')?.hasError('required')">
+            Password is required.
+          </span>
+          <span *ngIf="signupFormGroup.get('password')?.hasError('pattern')">
+            Password should contain altleast 1 Capital letter, 1 special character and 1 Number
+          </span>
+        </mat-error>
+
+        <!-- <mat-hint>
+          Password should contain altleast 1 Capital letter, 1 special character and 1 Number
+        </mat-hint> -->
+      </div>
+      <div class="form-group mt-3">
+        <label for="password">Confirm Password</label>
+        <input [ngClass]="{
+            'input-form-success': signupFormGroup.get('confirmPassword')?.valid,
+            'form-control': true,
+            'input-form-error':
+              signupFormGroup.get('confirmPassword')?.invalid &&
+              signupFormGroup.get('confirmPassword')?.touched
+          }" matInput type="password" class="form-control" formControlName="confirmPassword" id="cofirmpassword" />
+        <mat-error class="d-flex justify-content-end" *ngIf="
+            signupFormGroup.get('confirmPassword')?.invalid &&
+            signupFormGroup.get('confirmPassword')?.touched
+          ">
+
+          <span *ngIf="signupFormGroup.get('confirmPassword')?.hasError('required')">
+            Password is required.
+          </span>
+
+        </mat-error>
+        <mat-error class="d-flex justify-content-end" *ngIf="signupFormGroup.get('confirmPassword')?.touched">
+          <span *ngIf="signupFormGroup.get('password')?.value !== signupFormGroup.get('confirmPassword')?.value">
+            Password Does not match
+          </span>
+        </mat-error>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block mt-3" (click)="signup1()">
+        Register
+      </button>
+      <mat-error class="d-flex justify-content-center" *ngIf="isSignUpFailed">
+        <span>Error occured while register please try again later</span>
+      </mat-error>
+      <hr />
+      <div class="text-center mt-3">
+        <span>Have an account?</span>
+        <a (click)="toggleBetweenLoginPages('login')" class="text-primary mx-2" style="cursor: pointer;">Log In</a>
+      </div>
+    </form>
+  </ng-template>
+</div>

@@ -1,0 +1,59 @@
+.mat-divider-vertical {
+    height: 250px;
+    width: 0px !important;
+    position: inherit !important;
+}
+
+.btn-primary {
+    background: #476187 !important;
+}
+
+.btn:hover {
+    background: #021a3d !important;
+}
+.cardContainer{
+    margin-top: 20px;
+}
+
+.card {
+    box-shadow: 2px 2px 15px gray;
+}
+
+.breadcrumb {
+    font-size: 1.2rem !important;
+    color: #0a456c !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.container {
+    width: 100%;
+    position: inherit!important;
+  }
+  
+  .line {
+    flex: 1;
+  }
+  
+  .text {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    .container{
+        height: 90%;
+        width: 100%;
+        padding: 20px !important;
+        max-width: 100%; 
+        }
+    .cardContainer{
+        margin-top: 0 !important;
+        height: 100%;
+    }
+    .cardWrapper{
+        height: 100%;
+    }
+  }

@@ -1,0 +1,37 @@
+.header{
+    position: relative;
+    background-color: white;
+}
+.headerLink{
+    cursor: pointer;
+}
+.link{
+    padding-bottom: 0;
+}
+.activeLink{
+    background: #1175B5;
+    height: 4px;
+    text-align: center;
+    display: flex;
+    display: flex;
+    margin-left: 15px;
+    justify-content: center;
+}
+.loginBtn{
+    border: 2px solid #67A6F8;
+    color: #67A6F8;
+    padding: 5px 1rem;
+    width: 12rem;
+    border-radius: 10px;
+}
+.loginBtn:hover{
+    background-color: #F6F7F9;
+}
+.dropdown-item{
+    cursor: pointer;
+}
+.menu-item{
+    :hover{
+        background-color: #cae8ff ;
+    }
+}

@@ -1,0 +1,28 @@
+.example-radio-group {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 0;
+  align-items: flex-start;
+  line-height: 20px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.question-label {
+  font-size: 15px;
+  font-weight: 450;
+}
+.example-radio-button {
+  margin: 3px;
+}
+
+.question-card {
+  max-width: 80%;
+  min-width: 300px;
+}
+
+.question-from-control {
+  display: block;
+  width: 60%;
+  margin: 3px;
+}

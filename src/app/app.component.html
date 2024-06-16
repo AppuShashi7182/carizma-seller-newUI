@@ -1,0 +1,121 @@
+<!-- <app-layout class="logo-img"> -->
+  <!-- <mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+      <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+      <main style="min-height: 720px">
+        <alert class="alert"></alert>
+        <router-outlet
+          (activate)="onActivate($event, outlet)"
+          #outlet
+        ></router-outlet>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container> -->
+  
+  <!-- <section id="hero" class="hero">
+
+    <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2 data-aos="fade-up" data-aos-delay="100">Sell your car in any condition hassle free!</h2>
+          <p data-aos="fade-up" data-aos-delay="200">Online quotes and immediate payment!</p>
+          <br /><br />
+          <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Licence plate</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">VIN</button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Make / Model</button>
+          </div>
+
+          <div id="London" class="tabcontent">
+            <div class="row">
+              <div class="col-sm-6">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+              </div>
+
+              <div class="col-sm-6 ">
+                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+              </div>
+            </div>
+            <br />
+            <input type="submit" class="btn btn-primary width-100" value="Get my quote">
+          </div>
+
+          <div id="Paris" class="tabcontent">
+            <h3>VIN</h3>
+            <p>Vin details</p>
+          </div>
+
+          <div id="Tokyo" class="tabcontent">
+            <h3>Make / Model</h3>
+            <p>Details</p>
+          </div>
+
+          <script>
+            function openCity(evt, cityName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+
+            document.getElementById("defaultOpen").click();
+          </script>
+        </div>
+        <div class="col-lg-6">
+          <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style="height: 420px;">
+            <div class="carousel-indicators" style="margin-top: 32px;">
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""
+                aria-current="true"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"
+                class=""></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"
+                class=""></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"
+                class=""></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" style="height: 400px;">
+                <img src="assets/img/testimonials/home-carosoul-1.png" style="height: 100%; width: 100%; " alt="">
+              </div>
+              <div class="carousel-item" style="height: 400px;">
+                <img src="assets/img/testimonials/home-carosoul-2.png" style="height: 100%; width: 100%; " alt="">
+              </div>
+              <div class="carousel-item" style="height: 400px;">
+                <img src="assets/img/testimonials/home-carosoul-3.png" style="height: 100%; width: 100%; " alt="">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <app-header></app-header>
+  <router-outlet
+          (activate)="onActivate($event, outlet)"
+          #outlet
+        ></router-outlet>
+  
+  <!-- <app-footer></app-footer> -->
+<!-- </app-layout> -->

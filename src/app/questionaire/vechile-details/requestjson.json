@@ -1,0 +1,35 @@
+{
+  "CarDetails": {
+    "make": "NISSAN",
+    "model": "Cube",
+    "year": 2009,
+    "style": "",
+    "mileage": 0,
+    "trim": "",
+    "vin": ""
+  },
+  "vehicleDetails": {
+    "carTitle": "Clean",
+    "carLoan": false,
+    "mileage": "321234",
+    "color": "Blue",
+    "zipCode": "28213"
+  },
+  "vehicleCondition": {
+    "externalConditions": {
+      "vechileTransmissionType": "manual",
+      "DoesInteriorIntact": true,
+      "DoesCarSufferedFloodorFireDamage": true,
+      "doesAirbagsDeployedOrMissing": true,
+      "doesBodyPanelIntact": true,
+      "NoticeableDingsDentsScratches": true,
+      "doesBodyDamage": true,
+      "doesAllGlassorLightCracked": true,
+      "doesAllCarWheelInflated": true
+    },
+    "doesCarHaveMechanicalIssues": true,
+    "doesCarStart": true,
+    "doesCarDrive": false,
+    "carEngineandTransmission": true
+  }
+}

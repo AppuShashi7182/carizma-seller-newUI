@@ -1,0 +1,77 @@
+<app-car-loader *ngIf="isLoading"></app-car-loader>
+
+<div>
+  <!-- <form [formGroup]="licensePlateSelection" style="height: 70%" (ngSubmit)="onSubmit()">
+    <mat-grid-list cols="4" rowHeight="50px" gutterSize="3px">
+      <mat-grid-tile colspan="2" rowspan="1.5">
+
+        <div class="form-group">
+          <input type="text" class="form-control" id="licensePlateNumber" aria-describedby="LicensePlate" placeholder="License Plate">
+          <div *ngIf="myForm.get('licensePlateNumber')?.touched && myForm.get('licensePlateNumber')?.hasError('required')" class="text-danger">
+            License Number is required.
+          </div>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="2" rowspan="1.5">
+      <form [formGroup]="myForm" class="w-90">
+        <div class="form-group">
+          <select id="selectedOption" class="form-control" formControlName="selectedOption">
+            <option value="" disabled>Select State</option>
+            <option *ngFor="let option of filteredOptions | async" [value]="option" >{{option}}</option>
+          </select>
+      
+          <div *ngIf="myForm.get('selectedOption')?.touched && myForm.get('selectedOption')?.hasError('required')" class="text-danger">
+            State is required.
+          </div>
+        </div>
+      </form>
+    </mat-grid-tile>
+      <br />
+      <mat-grid-tile colspan="4" class="w-80">
+        <div class="d-flex justify-content-center w-100">
+          <button type="button" class="btn getOfferBtn ml-2">GET MY OFFER</button>
+      </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </form> -->
+  <form [formGroup]="licensePlateSelection" style="height: 70%" (ngSubmit)="onSubmit()">
+    <div >
+    <div class="d-flex justify-content-center">
+    <div class="form-group" style="width: 90%;margin: 10px;">
+      <input type="text" id="licensePlateNumber" class="form-control" placeholder="Enter License Number" [(ngModel)]="licenseDetails.licensePlateNumber" formControlName="licensePlateNumber">
+  
+      <!-- Display error only if the field is touched -->
+      <div class="text-format-open-sans" *ngIf="licensePlateSelection.get('licensePlateNumber')?.touched && licensePlateSelection.get('licensePlateNumber')?.hasError('required')" class="text-danger">
+        License Number is required.
+      </div>
+      <div class="text-format-open-sans" *ngIf="errors['licensePlate']" class="text-danger">
+        {{errors['licensePlate']}}
+      </div>
+    </div>
+  </div>
+    <div class="d-flex justify-content-center">
+    <div class="form-group"  style="width: 90%;margin: 10px;">
+      <select id="state" class="form-control" formControlName="state" [(ngModel)]="licenseDetails.state">
+        <option value="" disabled>Select State</option>
+            <option *ngFor="let option of filteredOptions | async" [value]="option" >{{option}}</option>
+      </select>
+  
+      <div class="text-format-open-sans" *ngIf="licensePlateSelection.get('state')?.touched && licensePlateSelection.get('state')?.hasError('required')" class="text-danger">
+        State is required.
+      </div>
+      <div class="text-format-open-sans" *ngIf="errors['licensePlate']" class="text-danger">
+        &nbsp;
+      </div>
+    </div>
+  </div>
+  <div class="w-100 d-flex justify-content-center">
+    <div class="d-flex justify-content-center w-100">
+      <button type="button" (click)="onSubmit()" class="btn getOfferBtn ml-2 text-format-open-sans">GET MY OFFER</button>
+  </div>
+
+  </div>
+</div>
+  </form>
+  
+
+</div>
